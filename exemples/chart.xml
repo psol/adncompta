@@ -1,0 +1,2001 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:AAAChartOfAccountsMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                               xmlns:rsm="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2"
+                               xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+                               xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10"
+                               xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:10"
+                               xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10">
+   <rsm:AAAChartOfAccountsAccountingAccountClassification>
+      <ram:ID>2012-05-CA</ram:ID>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>101000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Capital individuel</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>101300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Capital souscrit non appelé</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>101400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Capital souscrit appelé non versé</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>101500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Capital souscrit appelé versé</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>104100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Primes émission</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>106110</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Réserve légale</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>106880</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Réserves diverses</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>108000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Compte de l'exploitant</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>108100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Cpte de l'exploit prélèv en nature</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>108900</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Cpte de l'exploitant apports</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>110000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Report à nouveau crédit</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>119000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Report à nouveau débit</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>120000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Résultat de l'exercice bénéfice</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>129000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Résultat de l'exercice perte</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>131000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Subvention d'équipement</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>145000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissements dérogatoires</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>160000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Emprunts échus</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>164000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Emprunts établissements de crédit</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>168840</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus /emprunt ets crédit</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>168880</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus / autres emprunts</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>201100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais de constitution</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>201300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais augment cap opér diverses</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>203000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais de recherche et développement</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>205000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Concessions brevets licences</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>206000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Droit au bail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>207000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fonds commercial</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>208000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autre immobilisation incorporelle</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>211100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Terrains nus</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>211200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Terrains aménagés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>211500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Terrains batis</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>212000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Agencements aménagements terrains</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>213100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Bâtiments</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>213500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Instal agenct aménagt constructions</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>214000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Construction sur sol d'autrui</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>215400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Matériel outillage industriel</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>218100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Instal agenc aménag divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>218200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Matériel transport</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>218300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Matériel bureau et informatique</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>218400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Mobilier</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>231000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Immobilisation corporelle en cours</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>237000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Avance acpte s/immo incorporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>238000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Avance acpte s/immo corporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>241000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux reproducteurs adultes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>242000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux reproducteurs jeunes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>243000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux de services adultes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>246000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Plantations pérennes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>247000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres végétaux immobilisés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>271000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Titres immobilisés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>274000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prêts</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>275000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dépôts et cautionnements versés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissement frais d'établissement</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280130</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortis frais augmentation capital</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissement frais de recherche</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort concession &amp; droit similaire</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissement fonds commercial</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>280800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort autres immob incorporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort agencement aux terrains</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281310</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissements bâtiments</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281350</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort agenc aménagemt construction</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortis. construction sol autrui</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281540</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortis. instal. matériel out. indu</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281810</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort agenc aménag divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281820</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort matériel de transport</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281830</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort matériel de bureau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>281840</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissement mobilier</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>284100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort. anim. reprod. adultes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>284200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort. anim. reprod. jeunes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>284300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort. anim. services adultes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>284600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort. plantations pérennes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>284700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amort. autres végétaux immobilisés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock engrais amendements</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock semences et plants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock prod. défense des végétaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock aliments du bétail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock prod. défense des animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock prod. de reproduction animale</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock emballages</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>301800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock combustibles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock carburants et lubrifiants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock produits d'entretien</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock fournitures d'atelier et maga</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock fournitures de bureau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock denrées pour le personnel</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock matériaux divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock autres fournit. consommables</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>302800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock matières premières</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>310000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock animaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>320000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock animaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>331000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock Avances aux cultures cycle lo</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>332000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock pépinières cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>338000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock Autres végétaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>341000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock Avances aux cultures cycle co</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>348000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Stock Autres végétaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>351000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Vins en cours cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>352000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Alcools en cours cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>356000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres biens en cours cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>357000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Travaux à façon en cours cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>358000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres services en cours cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>361000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits végétaux en cours cycle co</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>362000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits animaux en cours cycle cou</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>363000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Vins en cours cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>364000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Alcools en cours cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>365000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Aut. prod. transf.en cours cycle co</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>366000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres biens en cours cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>367000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Trav. à façon en cours cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>368000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres services en cours cycle cour</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>371000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits intermédiaires végétaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>372000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits intermédiaires animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>373000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits intermédiaires transformés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>374000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits finis végétaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>375000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits finis animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>376000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits finis transformés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>377000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits résiduels</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>378000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits activités annexes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>390000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. approvis. et m/ses</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>391000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. animaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>392000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. animaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>393000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. végétaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>394000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. végétaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>395000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. en cours B et S cycle</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>396000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. en cours B et S cylce</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>397000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov. dépréc. des produits</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>401000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournisseurs</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>401000</ram:ID>
+         <ram:TypeCode>2</ram:TypeCode>
+         <ram:SubAccountID>DR</ram:SubAccountID>
+         <ram:Name>Digital river</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>401000</ram:ID>
+         <ram:TypeCode>2</ram:TypeCode>
+         <ram:SubAccountID>EDIFIC</ram:SubAccountID>
+         <ram:Name>Edificas</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>404000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournisseurs achats d'immobilisatio</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>408100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournisseurs factures non parvenues</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>408400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frs immob factures non parvenues</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>409100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frs avances &amp; acptes versés / cde</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>409600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frs créances emballages à rendre</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>409810</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>RRR à obtenir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>409820</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres avoirs non encore reçu</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>411000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Clients</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>411000</ram:ID>
+         <ram:TypeCode>2</ram:TypeCode>
+         <ram:SubAccountID>COOPBW</ram:SubAccountID>
+         <ram:Name>Coopérative (Blue Whale)</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>416000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Clients douteux</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>418100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Clients factures à établir</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>419100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Clients avances &amp; acomptes reçus</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>419600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Clients dettes matériel consigné</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>419810</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>RRR à accorder</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>419820</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres avoirs à établir</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>421000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Personnel rémunérations dues</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>421001</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Donald Duck</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>425000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Personnel acomptes &amp; avances</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>428200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dettes prov p/ congés payés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>428600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres charges à payer</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>428700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits à recevoir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>431000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Mutualité sociale agricole</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>437000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres organismes sociaux</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>438620</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges s/congés à payer SSD</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>438700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod. à recevoir organismes sociaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxes s/ CA à décaisser</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445511</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>TVA à reverser</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445540</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe s/CA à décaisser CA12</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>TVA Frais de stockage</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445620</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>TVA sur immobilisations</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445660</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>TVA sur autres biens &amp; services</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445670</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Crédit de TVA à reporter</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445710</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>TVA collectée</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445830</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Remboursement taxe s/CA ddé</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445860</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe s/CA factures non parvenue</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>445870</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe sur CA facture à établir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>448700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits à recevoir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>455800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>462000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Créance s/cessions immobilisation</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>468600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Débit crédit charges à payer</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>468700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits à recevoir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>471000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Compte d'attente</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>481100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges différées</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>481200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais d'acquisitions des immobilisa</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>481800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges à étaler</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>486100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges d'exploit. const. d'avance</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>487000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod exploit. constatés d'avance</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>491000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prov dépréciation cpte clients</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>512000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Banque</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>512000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:SubAccountID>PICSOU</ram:SubAccountID>
+         <ram:Name>Banque Picsou</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>514000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Chèques postaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>518600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus à payer</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>518700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus à recevoir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>519100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Crédits bancaires de campagne</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>519700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Crédits de mobilisation de créances</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>519800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts courus s/concours bancaire</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>530000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Caisse</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>580000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Virements internes</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>581000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Virements internes</ram:Name>
+         <ram:MatchingMarkIndicator>true</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Engrais et amendements</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Semences et plants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits de défense des végétaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Aliments du bétail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits de défense des animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits de reproduction animale</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Emballages</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>601800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Combustibles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Carburants et lubrifiants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits entretien</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournitures d'atelier et magasin</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournitures de bureau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Denrées et fournitures p/le personn</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Matériaux divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres fournitures consommables</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>602800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Matières premières</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603110</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock engrais amendements</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603120</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock semences plants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603130</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock prod. défense végétau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603140</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock aliments du bétail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603150</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock prod.défense animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603160</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock prod.reproduction anim</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603170</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock emballages</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603180</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock combustibles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603210</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock carburants lubrifiants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603220</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock produits entretien</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603230</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock fournit.atelier magasi</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603240</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat stock fournitures bureau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603260</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock matériaux divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603270</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat.stock autres fournit. consom</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603280</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock  matières premières</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>603700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variat. stock de marchandises</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>604000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Achats d'animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>605000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Achats de travaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Eau</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Gaz</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Electricité</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Carburants et lubrifiants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Eau d'irrigation</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fournitures entretien, petit équipe</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>606800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres fournitures non stockées</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>607000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Achats de marchandises</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur approvisionnemen</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur autres approv.</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur travaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur fournitures stoc</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus sur marchandises</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>609800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>R.R.R. obtenus non affectés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>612000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Redevances crédit bail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>613100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Fermages et loyers du foncier</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>613200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Locations de matériels</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>613400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Locations d'animaux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>613600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Malis sur emballages</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>613800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres locations</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>614000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges locatives</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>615000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Entretien et réparations</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>616081</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Assurances décès s/emprunt</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>616100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Assurances multirisques</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>616300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Assurances transport</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>618100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Documentation générale</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>618500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais colloques &amp; séminaires</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>622000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais de stockage</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>622601</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Honoraires comptables</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>622602</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Honoraires commissaires aux comptes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>622700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais d'actes contentieux</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>623100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Annonces &amp; insertions</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>623400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Cadeaux clients</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>623800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Pourboires dons courants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>624100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Transports sur achats</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>624200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Transports sur ventes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>625100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Voyages &amp; déplacements</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>625700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Réceptions</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>626100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Affranchissements</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>626200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Téléphone</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>627600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Locations de coffres</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>627800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Autres services bancaires</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>628100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Cotisations professionnelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>628700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Frais recrutement personnel</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>631200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe d'apprentissage</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>633300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Part. employeur form. profession.</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>633400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Part. employeur effort construction</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>633500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Versemt libérat. exo taxe apprentis</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>635100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe professionnelle</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>635140</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe s/véhicules de sociétés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>635200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Taxe foncière</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>637000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Retenue avec Taxes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>637100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Contribution sociale de solidarité</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>641100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rémunération du personnel</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>641200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variation congés à payer</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>641700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Indemnités avantages divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>644000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rémunération travail exploitant</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>645000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charge sécur. sociale &amp; prévoyance</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>645020</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Variation charges sociales s/CP</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>646000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Cotisations sociales persennelles e</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>647500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Médecine du travail</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>651600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Droits d'auteurs &amp; reproduction</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>654100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Créances de l'exercice</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>654400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Créances exercices antérieurs</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>658000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges diverses de gestion courant</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>661160</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts des emprunts</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>661820</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Intérêts de compte courant</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>665000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Escomptes accordés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>671200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Pénal. amendes fiscales &amp; pénales</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>671300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dons libéralités</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>671400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Créances devenues irrécouvrables</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>671700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rappels d'impôts</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>675100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Val. comptab.immob.incorp.cédées</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>675200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Val.comptab.immob.corp.cédées</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>675400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Val.compta.immob.corp.cédées vivant</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>678800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Charges exceptionnelles diverses</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681110</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dotation amort immo incorporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681120</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dotation amort immo corporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681140</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dot amort immob corporelles vivants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dot amort charge exploit à répartir</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681730</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dot provision dépréciation stock</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>681740</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dot provision créances clients</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>687250</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissement dérogatoire</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>687300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dot provision règlementée s/stock</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>695000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Impôts sur bénéfices</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>697000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Imposit forfait annuelles des stés</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>701000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Ventes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>712100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux reproducteurs adultes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>712200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux reproducteurs jeunes</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Animaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Végétaux cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Végétaux cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713500</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>En-cours de production cycle long</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713600</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>En-cours de production cycle court</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>713700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>722000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Production immobilisée corporelle</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>724000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Production immobil. corp. vivants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>740000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Subventions d'exploitation</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>758000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits divers de gestion courante</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>762000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod des autres immo. financières</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>765000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Escomptes obtenus</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>771700</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Dégrèvements d'impôts</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>775100</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod. cessions immob incorporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>775200</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod cessions immo corporelles</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>775400</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Prod. cessions immob. corp. vivants</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>777000</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Quote part subv invest virée résult</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>778800</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Produits exceptionnels divers</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>781730</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rep s/ prov dépréciation stock</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>781740</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rep s/prov dépréciation créance</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>787250</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Amortissements dérogatoires</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+      <ram:RelatedAAAChartOfAccountsAccountingAccount>
+         <ram:ID>787300</ram:ID>
+         <ram:TypeCode>1</ram:TypeCode>
+         <ram:Name>Rep s/prov règlementée s/stock</ram:Name>
+         <ram:MatchingMarkIndicator>false</ram:MatchingMarkIndicator>
+      </ram:RelatedAAAChartOfAccountsAccountingAccount>
+   </rsm:AAAChartOfAccountsAccountingAccountClassification>
+</rsm:AAAChartOfAccountsMessage>

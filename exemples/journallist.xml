@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<rsm:AAAAccountingJournalListMessage xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:rsm="urn:un:unece:uncefact:data:standard:AAAAccountingJournalListMessage:2"
+	xmlns:ccts="urn:un:unece:uncefact:documentation:standard:CoreComponentsTechnicalSpecification:2"
+	xmlns:udt="urn:un:unece:uncefact:data:standard:UnqualifiedDataType:10"
+	xmlns:qdt="urn:un:unece:uncefact:data:standard:QualifiedDataType:10"
+	xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10">
+	<rsm:AAAJournalJournalList>
+		<ram:ID>2012-05-JL</ram:ID>
+		<ram:Comment>Pomelo</ram:Comment>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>ACH</ram:ID>
+			<ram:Name>Achat</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>4</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>BALI</ram:ID>
+			<ram:Name>Balance importée</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>BALS</ram:ID>
+			<ram:Name>Balance saisie</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>CONT</ram:ID>
+			<ram:Name>Contrepassations</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>INVC</ram:ID>
+			<ram:Name>Inv. à contrepasser (saisie)</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>INVR</ram:ID>
+			<ram:Name>Inventaire (assistants)</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>INVS</ram:ID>
+			<ram:Name>Inventaire (saisie)</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>ODR</ram:ID>
+			<ram:Name>Opér. diverses (assistants)</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>RECL</ram:ID>
+			<ram:Name>Reclassement</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>3</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>TRES</ram:ID>
+			<ram:Name>Trésorerie</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>2</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+		<ram:IncludedAAAJournalAccountingJournal>
+			<ram:ID>VENT</ram:ID>
+			<ram:Name>Vente</ram:Name>
+			<ram:TypeCode>4</ram:TypeCode>
+			<ram:CategoryCode>5</ram:CategoryCode>
+		</ram:IncludedAAAJournalAccountingJournal>
+	</rsm:AAAJournalJournalList>
+</rsm:AAAAccountingJournalListMessage>

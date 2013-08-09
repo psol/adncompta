@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:AAAReportingMessage xmlns:rsm="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2"
+   xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2 file:/Users/bmarchal/Documents/GT4%20doc/uncefact11a/data/standard/AAAReportingMessage_2p0.xsd">
+   <rsm:AAAReportFormality>
+      <ram:ID>2012-05-AR</ram:ID>
+      <ram:NomenclatureID>http://edificas.fr/2012/nomenclature</ram:NomenclatureID>
+      <ram:IncludedAAAReportFormTemplate>
+         <ram:ID>response.xml</ram:ID>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-1</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#organization</ram:ResponseIndexID>
+               <ram:ReferenceID>intermediate</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportOrganization>
+               <ram:Name>Cidre Online</ram:Name>
+               <ram:AbbreviatedName>CIOL</ram:AbbreviatedName>
+               <ram:OtherID>422260208</ram:OtherID><!-- à modifier -->
+               <ram:PostalAAAAddress>
+                  <ram:PostcodeCode>90001</ram:PostcodeCode>
+                  <ram:CityName>Belfort Cedex</ram:CityName>
+                  <ram:PostOfficeBox>80043</ram:PostOfficeBox>
+               </ram:PostalAAAAddress>
+            </ram:SpecifiedAAAReportOrganization>
+         </ram:IncludedAAAReport>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-2</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#organization</ram:ResponseIndexID>
+               <ram:ReferenceID>recipient</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportOrganization>
+               <ram:Name>Pomme d'API</ram:Name>
+               <ram:AbbreviatedName>PAPI</ram:AbbreviatedName>
+               <ram:OtherID>422260208</ram:OtherID>
+               <ram:PostalAAAAddress>
+                  <ram:PostcodeCode>45370</ram:PostcodeCode>
+                  <ram:LineOne>14 Rue Saint André</ram:LineOne>
+                  <ram:CityName>Saint André</ram:CityName>
+                  <ram:CountryName>France</ram:CountryName>
+               </ram:PostalAAAAddress>
+            </ram:SpecifiedAAAReportOrganization>
+         </ram:IncludedAAAReport>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-3</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#documentID</ram:ResponseIndexID>
+               <ram:ReferenceID>journallist.xml</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#token</ram:ResponseIndexID>
+               <ram:ReferenceID>43FZZF452322DSGR=</ram:ReferenceID>
+               <ram:SpecifiedDate>2012-07-10</ram:SpecifiedDate>
+               <ram:SpecifiedTime>13:54:01</ram:SpecifiedTime>
+               <ram:ResponseIndicator>true</ram:ResponseIndicator>
+            </ram:SpecifiedAAAReportExpectedInformation>
+         </ram:IncludedAAAReport>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-4</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#documentID</ram:ResponseIndexID>
+               <ram:ReferenceID>entry.xml</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#token</ram:ResponseIndexID>
+               <ram:ReferenceID>43IUDF422222DSGR=</ram:ReferenceID>
+               <ram:SpecifiedDate>2012-07-10</ram:SpecifiedDate>
+               <ram:SpecifiedTime>13:54:01</ram:SpecifiedTime>
+               <ram:ResponseIndicator>true</ram:ResponseIndicator>
+            </ram:SpecifiedAAAReportExpectedInformation>
+         </ram:IncludedAAAReport>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-5</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#documentID</ram:ResponseIndexID>
+               <ram:ReferenceID>chart.xml</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#token</ram:ResponseIndexID>
+               <ram:ReferenceID>83FZZEDED322SXXR=</ram:ReferenceID>
+               <ram:SpecifiedDate>2012-07-10</ram:SpecifiedDate>
+               <ram:SpecifiedTime>13:54:01</ram:SpecifiedTime>
+               <ram:ResponseIndicator>true</ram:ResponseIndicator>
+            </ram:SpecifiedAAAReportExpectedInformation>
+         </ram:IncludedAAAReport>
+         <ram:IncludedAAAReport>
+            <ram:ItemID>2012-05-AR-6</ram:ItemID>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#documentID</ram:ResponseIndexID>
+               <ram:ReferenceID>ledger.xml</ram:ReferenceID>
+            </ram:SpecifiedAAAReportExpectedInformation>
+            <ram:SpecifiedAAAReportExpectedInformation>
+               <ram:ResponseIndexID>#token</ram:ResponseIndexID>
+               <ram:ReferenceID>987ZZF453222DSGR=</ram:ReferenceID>
+               <ram:SpecifiedDate>2012-07-10</ram:SpecifiedDate>
+               <ram:SpecifiedTime>13:54:01</ram:SpecifiedTime>
+               <ram:ResponseIndicator>true</ram:ResponseIndicator>
+            </ram:SpecifiedAAAReportExpectedInformation>
+         </ram:IncludedAAAReport>
+      </ram:IncludedAAAReportFormTemplate>
+      <ram:ConcernedAAAReportOrganization>
+         <ram:Name>Guillaume Tell</ram:Name>
+         <ram:OtherID>12345678900012</ram:OtherID>
+         <ram:PostalAAAAddress>
+            <ram:PostcodeCode>75113</ram:PostcodeCode>
+            <ram:LineOne>14, Rue de la Flèche</ram:LineOne>
+            <ram:CityName>Paris</ram:CityName>
+         </ram:PostalAAAAddress>
+      </ram:ConcernedAAAReportOrganization>
+      <ram:SpecifiedAAAReportAccountingPeriod>
+         <ram:SpecifiedAAAPeriod>
+            <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
+            <ram:EndDateTime>2012-06-30T24:00:00</ram:EndDateTime>
+         </ram:SpecifiedAAAPeriod>
+      </ram:SpecifiedAAAReportAccountingPeriod>
+   </rsm:AAAReportFormality>
+</rsm:AAAReportingMessage>

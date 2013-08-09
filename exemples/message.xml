@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:AAAAccountingMessage xmlns:rsm="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2"
+   xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2 file:/Users/bmarchal/Documents/GT4%20doc/uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd">
+   <rsm:AAAWrapAccountingBook>
+      <ram:ID>1</ram:ID>
+      <ram:SpecifiedAAAWrapProcessedEntity>
+         <ram:AccountingIdentificationID>349</ram:AccountingIdentificationID>
+         <ram:OriginatorAAAWrapOrganization>
+            <ram:Name>Pomme d'API</ram:Name>
+            <ram:AbbreviatedName>PAPI</ram:AbbreviatedName>
+            <ram:OtherID>422260208</ram:OtherID>
+            <ram:PostalAAAAddress>
+               <ram:PostcodeCode>45370</ram:PostcodeCode>
+               <ram:LineOne>14 Rue Saint André</ram:LineOne>
+               <ram:CityName>Saint André</ram:CityName>
+               <ram:CountryName>France</ram:CountryName>
+            </ram:PostalAAAAddress>
+         </ram:OriginatorAAAWrapOrganization>
+         <ram:RecipientAAAWrapOrganization>
+            <ram:Name>Guillaume Tell</ram:Name>
+            <ram:OtherID>12345678900012</ram:OtherID>
+            <ram:PostalAAAAddress>
+               <ram:PostcodeCode>75113</ram:PostcodeCode>
+               <ram:LineOne>14, Rue de la Flèche</ram:LineOne>
+               <ram:CityName>Paris</ram:CityName>
+            </ram:PostalAAAAddress>
+         </ram:RecipientAAAWrapOrganization>
+         <ram:IntermediateAAAWrapSoftware>
+            <ram:Name>Pomelo</ram:Name>
+            <ram:VersionID>10.0</ram:VersionID>
+            <ram:ProvidedAAAWrapCertificate>
+               <ram:ID>1</ram:ID>
+               <ram:TypeCode>3</ram:TypeCode>
+               <ram:SoftwareOperatingSystem>MacOS</ram:SoftwareOperatingSystem>
+               <ram:IssueDateTime>2012-01-01T24:00:00</ram:IssueDateTime>
+            </ram:ProvidedAAAWrapCertificate>
+         </ram:IntermediateAAAWrapSoftware>
+         <ram:SpecifiedAAAWrapJournalList>
+            <ram:ID>journallist.xml</ram:ID>
+            <ram:Comment>Pomelo</ram:Comment>
+            <ram:SpecifiedAAAWrapAccountingPeriod>
+               <ram:SpecifiedAAAPeriod>
+                  <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
+                  <ram:EndDateTime>2012-06-30T24:00:00</ram:EndDateTime>
+               </ram:SpecifiedAAAPeriod>
+            </ram:SpecifiedAAAWrapAccountingPeriod>
+         </ram:SpecifiedAAAWrapJournalList>
+         <ram:SpecifiedAAAWrapDayBook>
+            <ram:ID>entry.xml</ram:ID>
+            <ram:Comment>Ventes de pommes</ram:Comment>
+            <ram:SpecifiedAAAWrapAccountingPeriod>
+               <ram:SpecifiedAAAPeriod>
+                  <ram:StartDateTime>2012-01-01T00:00:00</ram:StartDateTime>
+                  <ram:EndDateTime>2012-12-31T24:00:00</ram:EndDateTime>
+               </ram:SpecifiedAAAPeriod>
+            </ram:SpecifiedAAAWrapAccountingPeriod>
+         </ram:SpecifiedAAAWrapDayBook>
+         <ram:SpecifiedAAAWrapAccountingAccountClassification>
+            <ram:ID>chart.xml</ram:ID>
+         </ram:SpecifiedAAAWrapAccountingAccountClassification>
+         <ram:SpecifiedAAAWrapLedger>
+            <ram:ID>ledger.xml</ram:ID>
+            <ram:Comment>Ventes de pommes</ram:Comment>
+            <ram:SpecifiedAAAWrapAccountingPeriod>
+               <ram:SpecifiedAAAPeriod>
+                  <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
+                  <ram:EndDateTime>2012-06-30T24:00:00</ram:EndDateTime>
+               </ram:SpecifiedAAAPeriod>
+            </ram:SpecifiedAAAWrapAccountingPeriod>
+         </ram:SpecifiedAAAWrapLedger>
+      </ram:SpecifiedAAAWrapProcessedEntity>
+   </rsm:AAAWrapAccountingBook>
+</rsm:AAAAccountingMessage>
