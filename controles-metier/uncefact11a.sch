@@ -16,7 +16,7 @@
    http://www.oyxgenxml.com
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2013b</title>
+   <title>Validation de l'écriture comptable, niveau 1, 2013c</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
@@ -94,7 +94,7 @@
       </rule>
       <rule context="ram:JustifiedPostedAccountingEntry">
          <assert test="every $l in ram:DetailedPostedAccountingEntryLine satisfies $l/ram:Comment">
-            Au moins un des lignes de l'écriture <value-of select="../ram:ID"/> n'a pas de libellé
+            Au moins une des lignes de l'écriture <value-of select="../ram:ID"/> n'a pas de libellé
          </assert>
       </rule>
       <rule context="ram:DetailedPostedAccountingEntryLine[ram:RelatedFiscalTax]">
@@ -119,7 +119,7 @@
       <title>SIREN dans le message/envelope</title>
       <rule context="ram:OriginatorAAAWrapOrganization">
          <assert test="string-length(translate(normalize-space(ram:OtherID),' ','')) = 9">
-            Code SIREN <value-of select="ram:OtherID"/> invalide
+            Longueur du SIRET/SIREN de la balise <value-of select="ram:OtherID"/> invalide ou absent
          </assert>
          <assert test="sum(for $c in (for $i in (1 to 9) return xs:integer(substring(translate(normalize-space(ram:OtherID),' ',''),$i,1)) * (if ($i mod 2 != 0) then 1 else 2)) return if ($c >= 10) then $c - 9 else $c) mod 10 = 0">
             Code SIREN <value-of select="ram:OtherID"/> invalide
@@ -146,18 +146,18 @@
          <let name="debit"  value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '29']/ram:LocalAccountingCurrencyAmount"/>
          <let name="credit" value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '30']/ram:LocalAccountingCurrencyAmount"/>
          <assert test="round-half-to-even(sum($debit), 2) = round-half-to-even(sum($credit), 2)">
-            Débit (<value-of select="round-half-to-even(sum($debit), 2)"/>) n'est pas égal au crédit (<value-of select="round-half-to-even(sum($credit), 2)"/>) pour l'écriture <value-of select="ram:ID"/>
+            Débit (<value-of select="round-half-to-even(sum($debit), 2)"/>) n'est pas égal au crédit (<value-of select="round-half-to-even(sum($credit), 2)"/>) pour l'écriture (<value-of select="ram:ID"/>).
          </assert>
       </rule>
    </pattern>
    <pattern>
       <title>Liste de codes</title>
-      <let name="account-types" value="('1', '2')"/>
-      <rule context="ram:BookingBookedAccountingAccount">
+         <let name="account-types" value="('1', '2')"/>
+         <rule context="ram:BookingBookedAccountingAccount">
          <assert test="exists(index-of($account-types, ram:TypeCode))">
-            Le type de compte doit être un des suivants: <value-of select="string-join($account-types, ', ')"/>
+            Le type de compte doit être un des suivants : (<value-of select="string-join($account-types, ', ')" />) 1 général, 2 auxiliaire.
          </assert>
-      </rule>
+         </rule>
    </pattern>
    <pattern>
       <title>Compte-rendu de traitement (préliminaire)</title>
