@@ -137,11 +137,50 @@
    <pattern>
       <title>Compte-rendu de traitement (préliminaire)</title>
       <rule context="rsmres:AAAReportingMessage">
-         <assert test="rsmres:AAAReportFormality[ram:NomenclatureID = 'http://edificas.org/reporting']/ram:IncludedAAAReportFormTemplate/ram:IncludedAAAReport/ram:SpecifiedAAAReportExpectedInformation/ram:ResponseIndexID = 'success'">
-            Il n'y a pas d'indicateur de succès dans ce rapport.
+         <assert test="rsmres:AAAReportFormality/ram:NomenclatureID = 'http://edificas.fr/2012/nomenclature'">
+            La nomenclature n'est pas celle d'EDIFICAS !
          </assert>
-         <assert test="rsmres:AAAReportFormality/ram:NomenclatureID = 'http://edificas.org/reporting'">
-            Votre compte-rendu de traitement n'utilise pas la nomenclature EDIFICAS
+         <assert test="rsmres:AAAReportFormality/ram:ConcernedAAAReportOrganization">
+            Mais qui a émis ce compte-rendu de traitement ?
+         </assert>
+         <assert test="rsmres:AAAReportFormality/ram:SpecifiedAAAReportAccountingPeriod/ram:SpecifiedAAAPeriod">
+            La période sur laquelle porte ce compte-rendu de traitement est inconnue.
+         </assert>
+         <assert test="rsmres:AAAReportFormality/ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#organization' and ram:ReferenceID = 'recipient']">
+            Pas de destinataire pour ce compte-rendu de traitement.
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#organization']">
+         <assert test="ram:ReferenceID = 'intermediate' or ram:ReferenceID = 'recipient'">
+            Type d'organisation inconnue.
+         </assert>
+         <assert test="../ram:SpecifiedAAAReportOrganization">
+            Les données de l'organisation manquent.
+         </assert>
+      </rule>
+      <!-- à faire : vérifier le SIREN -->
+      <rule context="ram:IncludedAAAReport[ram:SpecifiedAAAReportExpectedInformation/ram:ResponseIndexID = '#documentID']">
+         <assert test="ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#documentID'][ram:ReferenceID]">
+            Compte-rendu n'identifie pas le document dont il parle.
+         </assert>
+         <assert test="ram:SpecifiedAAAReportExpectedInformation/ram:ResponseIndexID = '#token'">
+            Manque le jeton d'horodatage.
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#token' and string(ram:ResponseIndicator) = 'true']">
+         <assert test="ram:ReferenceID">
+            Hash manquant dans le jeton d'horodatage.
+         </assert>
+         <assert test="ram:SpecifiedDate">
+            Date manquante dans le jeton d'horodatage.
+         </assert>
+         <assert test="ram:SpecifiedTime">
+            Heure manquante dans le jeton d'horodatage.
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#token' and string(ram:ResponseIndicator) = 'false']">
+         <assert test="ram:Comment">
+            Rapport d'erreur sans commentaire.
          </assert>
       </rule>
    </pattern>
