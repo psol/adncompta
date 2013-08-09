@@ -16,7 +16,7 @@
    http://www.oyxgenxml.com
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2013a</title>
+   <title>Validation de l'écriture comptable, niveau 1, 2013b</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
@@ -58,21 +58,23 @@
    <pattern>
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
-         <let name="path" value="'../exemples/'"/>
+         <let name="tpath1" value="tokenize(document-uri(/), '/')"/>
+         <let name="tpath2" value="remove($tpath1, count($tpath1))"/>
+         <let name="path" value="concat(string-join($tpath2, '/'), '/')"/>
          <let name="period" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
          <let name="period-start" value="xs:dateTime($period/ram:StartDateTime)"/>
          <let name="period-end" value="xs:dateTime($period/ram:EndDateTime)"/>
-         <assert test="doc-available(concat($path,ram:SpecifiedAAAWrapJournalList/ram:ID))">
-            Document <value-of select="ram:SpecifiedAAAWrapJournalList/ram:ID"/> manquant
+         <assert test="if(ram:SpecifiedAAAWrapJournalList) then doc-available(concat($path,ram:SpecifiedAAAWrapJournalList/ram:ID)) else true()">
+            Document 'JournalList' <value-of select="ram:SpecifiedAAAWrapJournalList/ram:ID"/> manquant
          </assert>
          <assert test="doc-available(concat($path,ram:SpecifiedAAAWrapDayBook/ram:ID))">
-            Document <value-of select="ram:SpecifiedAAAWrapDayBook/ram:ID"/> manquant
+            Document 'Entry' <value-of select="ram:SpecifiedAAAWrapDayBook/ram:ID"/> manquant
          </assert>
-         <assert test="doc-available(concat($path,ram:SpecifiedAAAWrapAccountingAccountClassification/ram:ID))">
-            Document <value-of select="ram:SpecifiedAAAWrapAccountingAccountClassification/ram:ID"/> manquant
+         <assert test="if(ram:SpecifiedAAAWrapAccountingAccountClassification) then doc-available(concat($path,ram:SpecifiedAAAWrapAccountingAccountClassification/ram:ID)) else true()">
+            Document 'AccountClassification' <value-of select="ram:SpecifiedAAAWrapAccountingAccountClassification/ram:ID"/> manquant
          </assert>
-         <assert test="doc-available(concat($path,ram:SpecifiedAAAWrapLedger/ram:ID))">
-            Document <value-of select="ram:SpecifiedAAAWrapLedger/ram:ID"/> manquant
+         <assert test="if(ram:SpecifiedAAAWrapLedger) then doc-available(concat($path,ram:SpecifiedAAAWrapLedger/ram:ID)) else true()">
+            Document 'Ledger' <value-of select="ram:SpecifiedAAAWrapLedger/ram:ID"/> manquant
          </assert>
          <let name="value-dates" value="document(concat($path,ram:SpecifiedAAAWrapDayBook/ram:ID))/rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:ValueDateDateTime"/>
          <assert test="every $v in $value-dates satisfies xs:dateTime($v) >= $period-start">
@@ -143,8 +145,8 @@
       <rule context="ram:JustifiedPostedAccountingEntry">
          <let name="debit"  value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '29']/ram:LocalAccountingCurrencyAmount"/>
          <let name="credit" value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '30']/ram:LocalAccountingCurrencyAmount"/>
-         <assert test="sum($debit) = sum($credit)">
-            Débit n'est pas égal au crédit pour l'écriture <value-of select="ram:ID"/>
+         <assert test="round-half-to-even(sum($debit), 2) = round-half-to-even(sum($credit), 2)">
+            Débit (<value-of select="round-half-to-even(sum($debit), 2)"/>) n'est pas égal au crédit (<value-of select="round-half-to-even(sum($credit), 2)"/>) pour l'écriture <value-of select="ram:ID"/>
          </assert>
       </rule>
    </pattern>
