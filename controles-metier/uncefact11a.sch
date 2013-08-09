@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- 
+<!--
    Copyright 2012, EDIFICAS. Tous droits réservés.
    Projet : ADN Compta
    http://www.edificas.fr
-   
+
    ! Signalez-nous sans tarder les problèmes
    ! dans la mise en œuvre de ces règles. Merci.
    ! Benoît     : bmarchal@pineapplesoft.com
-   ! Frédérique : fleblond@cs.experts-comptables.org
+   ! Frédérique : fdanjon@cs.experts-comptables.org
 
    Pour valider un Schématron, utilisez une des implémentations sur
    http://www.schematron.com/implementation.html
@@ -16,7 +16,7 @@
    http://www.oyxgenxml.com
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2012a</title>
+   <title>Validation de l'écriture comptable, niveau 1, 2013a</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
@@ -40,7 +40,11 @@
          </assert>
       </rule>
    </pattern>
+   <!-- TODO vérifier les listes de code, etc. -->
+   <!-- TODO vérifier les status dépendants    -->
    <pattern>
+      <!-- faire également le contrôle que le compte auxilaire est bien accompagné d'un compte général -->
+      <!-- TODO prevoir aussi le compte SubAccount au lieu de [TypeCode = 2] -->
       <title>Numéro de comptes pour les comptes auxiliaires</title>
       <rule context="ram:BookingBookedAccountingAccount[ram:TypeCode = 2] | ram:RelatedAAAChartOfAccountsAccountingAccount[ram:TypeCode = 2] | ram:IncludedAAALedgerAccountingAccount[ram:TypeCode = 2]">
          <assert test="string-length(ram:ID) &lt; 18">
@@ -54,7 +58,7 @@
    <pattern>
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
-         <let name="path" value="'../examples/'"/>
+         <let name="path" value="'../exemples/'"/>
          <let name="period" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
          <let name="period-start" value="xs:dateTime($period/ram:StartDateTime)"/>
          <let name="period-end" value="xs:dateTime($period/ram:EndDateTime)"/>
@@ -135,6 +139,25 @@
       </rule>
    </pattern>
    <pattern>
+      <title>Equilibre de l'écriture</title>
+      <rule context="ram:JustifiedPostedAccountingEntry">
+         <let name="debit"  value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '29']/ram:LocalAccountingCurrencyAmount"/>
+         <let name="credit" value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[ram:DebitCreditCode = '30']/ram:LocalAccountingCurrencyAmount"/>
+         <assert test="sum($debit) = sum($credit)">
+            Débit n'est pas égal au crédit pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+      </rule>
+   </pattern>
+   <pattern>
+      <title>Liste de codes</title>
+      <let name="account-types" value="('1', '2')"/>
+      <rule context="ram:BookingBookedAccountingAccount">
+         <assert test="exists(index-of($account-types, ram:TypeCode))">
+            Le type de compte doit être un des suivants: <value-of select="string-join($account-types, ', ')"/>
+         </assert>
+      </rule>
+   </pattern>
+   <pattern>
       <title>Compte-rendu de traitement (préliminaire)</title>
       <rule context="rsmres:AAAReportingMessage">
          <assert test="rsmres:AAAReportFormality/ram:NomenclatureID = 'http://edificas.fr/2012/nomenclature'">
@@ -158,7 +181,7 @@
             Les données de l'organisation manquent.
          </assert>
       </rule>
-      <!-- à faire : vérifier le SIREN -->
+      <!-- TODO vérifier le SIREN -->
       <rule context="ram:IncludedAAAReport[ram:SpecifiedAAAReportExpectedInformation/ram:ResponseIndexID = '#documentID']">
          <assert test="ram:SpecifiedAAAReportExpectedInformation[ram:ResponseIndexID = '#documentID'][ram:ReferenceID]">
             Compte-rendu n'identifie pas le document dont il parle.
