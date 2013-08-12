@@ -262,6 +262,7 @@
         </folder>
         <folder path="ADN/"/>
         <folder path="exemples/"/>
+        <file name="controles-metier/functions.xsl"/>
         <file name="controles-metier/uncefact11a.sch"/>
     </projectTree>
 </project>

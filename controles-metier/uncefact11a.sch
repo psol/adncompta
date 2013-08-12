@@ -15,13 +15,15 @@
    dans un seul scénario de validation:
    http://www.oyxgenxml.com
 -->
-<schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2013c</title>
+<schema xmlns="http://purl.oclc.org/dsdl/schematron" xmlns:xsl="http://www.w3.org/1999/XSL/Transform" queryBinding="xslt2">
+   <xsl:include href="functions.xsl"/>
+   <title>Validation de l'écriture comptable, niveau 1, 2013d</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2" prefix="rsmmsg"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingEntryMessage:2" prefix="rsment"/>
+   <ns uri="http://adncompta.com/2013/functions" prefix="fn"/>
    <pattern>
       <title>Numéros de compte</title>
       <let name="first-account-length" value="if (count(//ram:BookingBookedAccountingAccount) > 0) then string-length((//ram:BookingBookedAccountingAccount[ram:TypeCode = 1]/ram:ID)[1]) else if (count(//ram:IncludedAAALedgerAccountingAccount)) then string-length((//ram:IncludedAAALedgerAccountingAccount[ram:TypeCode = 1]/ram:ID)[1]) else string-length((//ram:RelatedAAAChartOfAccountsAccountingAccount[ram:TypeCode = 1]/ram:ID)[1])"/>
@@ -58,9 +60,7 @@
    <pattern>
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
-         <let name="tpath1" value="tokenize(document-uri(/), '/')"/>
-         <let name="tpath2" value="remove($tpath1, count($tpath1))"/>
-         <let name="path" value="concat(string-join($tpath2, '/'), '/')"/>
+         <let name="path" value="fn:parent-directory(document-uri(/))"/>
          <let name="period" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
          <let name="period-start" value="xs:dateTime($period/ram:StartDateTime)"/>
          <let name="period-end" value="xs:dateTime($period/ram:EndDateTime)"/>
@@ -121,7 +121,7 @@
          <assert test="string-length(translate(normalize-space(ram:OtherID),' ','')) = 9">
             Longueur du SIRET/SIREN de la balise <value-of select="ram:OtherID"/> invalide ou absent
          </assert>
-         <assert test="sum(for $c in (for $i in (1 to 9) return xs:integer(substring(translate(normalize-space(ram:OtherID),' ',''),$i,1)) * (if ($i mod 2 != 0) then 1 else 2)) return if ($c >= 10) then $c - 9 else $c) mod 10 = 0">
+         <assert test="fn:is-siren-valid(ram:OtherID)">
             Code SIREN <value-of select="ram:OtherID"/> invalide
          </assert>
       </rule>
