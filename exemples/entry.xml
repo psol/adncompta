@@ -74,7 +74,7 @@
 							<ram:LocalAccountingCurrencyAmount>39.20</ram:LocalAccountingCurrencyAmount>
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
-								<ram:ID>405660</ram:ID>
+								<ram:ID>445660</ram:ID>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>

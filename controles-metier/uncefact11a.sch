@@ -56,6 +56,52 @@
       </rule>
    </pattern>
    <pattern>
+      <title>Validation des scénarios</title>
+      <rule context="ram:SpecifiedAAAWrapProcessedEntity">
+         <!-- 002 -->
+         <assert test="count(ram:ScenarioIdentificationID) = 1">
+            L'identifiant du scénario manquant.
+         </assert>
+         <!-- 004 -->
+         <assert test="count(ram:ScenarioStepNumberNumeric) = 1">
+            Le numéro d'étape dans le scénario manquant.
+         </assert>
+         <let name="actors" value="substring(ram:ScenarioIdentificationID, 16, 20)"/>
+         <!-- 005 -->
+         <assert test="($actors = 'PreparerIntermediary' and (ram:ScenarioStepNumberNumeric = '1' or ram:ScenarioStepNumberNumeric = '2')) or
+                       ($actors = 'IntermediaryArchiver' and (ram:ScenarioStepNumberNumeric = '2' or ram:ScenarioStepNumberNumeric = '3'))">
+            Etape de scénario <value-of select="ram:ScenarioStepNumberNumeric"/> incohérente pour un scénario entre <value-of select="$actors"/>
+         </assert>
+      </rule>
+      <rule context="ram:ScenarioIdentificationID">
+         <!-- 003 -->
+         <assert test="matches(., '^ADNCompta_2013_((PreparerIntermediary)|(IntermediaryArchiver))_Entry$')">
+            Identifiant du scénario inconnu ou mal formé
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAWrapProcessedEntity">
+         <!-- 013 -->
+         <assert test="count(ram:SpecifiedAAAWrapDayBook) > 0">
+            Journal d'écriture manquant
+         </assert>
+      </rule>
+   </pattern>
+   <pattern>
+      <title>Validation de l'unité de tenue de compte</title>
+      <!-- 006 -->
+      <rule context="ram:SpecifiedAAAWrapProcessedEntity">
+         <assert test="count(ram:LocalAccountingCurrencyCode) = 1">
+            Unité de tenue de compte manquante
+         </assert>
+      </rule>
+      <!-- 007 -->
+      <rule context="ram:LocalAccountingCurrencyCode">
+         <assert test="matches(., 'eur', 'i')">
+            Unité de tenue de compte invalide
+         </assert>
+      </rule>
+   </pattern>
+   <pattern>
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
          <let name="tpath1" value="tokenize(document-uri(/), '/')"/>
@@ -64,6 +110,7 @@
          <let name="period" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
          <let name="period-start" value="xs:dateTime($period/ram:StartDateTime)"/>
          <let name="period-end" value="xs:dateTime($period/ram:EndDateTime)"/>
+         <let name="useless-check" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAWrapAccountingCheck"/>
          <assert test="if(ram:SpecifiedAAAWrapJournalList) then doc-available(concat($path,ram:SpecifiedAAAWrapJournalList/ram:ID)) else true()">
             Document 'JournalList' <value-of select="ram:SpecifiedAAAWrapJournalList/ram:ID"/> manquant
          </assert>
@@ -83,10 +130,83 @@
          <assert test="every $v in $value-dates satisfies xs:dateTime($v) &lt;= $period-end">
             Date de valeur d'au moins une écriture postérieure au début de la période comptable (<value-of select="$period-end"/>)
          </assert>
+         <let name="values" value="document(concat($path, ram:SpecifiedAAAWrapDayBook/ram:ID))/rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue"/>
+         <!-- 034 -->
+         <assert test="if($useless-check)
+                       then abs(number($useless-check/ram:TotalDebitAmount) - sum(for $v in $values[ram:DebitCreditCode = 29]/ram:LocalAccountingCurrencyAmount return number($v))) lt 0.1
+                       else true()">
+            Total calculés des débits (<value-of select="sum($values[ram:DebitCreditCode = 29]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalDebitAmount"/>)
+         </assert>
+         <!-- 036 -->
+         <assert test="if($useless-check)
+                       then abs(number($useless-check/ram:TotalDebitAmount) - sum(for $v in $values[ram:DebitCreditCode = 30]/ram:LocalAccountingCurrencyAmount return number($v))) lt 0.1
+                       else true()">
+            Total calculés des crédits (<value-of select="sum($values[ram:DebitCreditCode = 30]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalCreditAmount"/>)
+         </assert>
       </rule>
    </pattern>
    <pattern>
-      <title>Attributs rendus obligatoires hors schéma</title>
+      <title>Autres attributs rendus obligatoires hors schéma</title>
+      <rule context="rsmmsg:AAAWrapAccountingBook">
+         <!-- 001 -->
+         <assert test="count(ram:SpecifiedAAAWrapProcessedEntity) = 1">
+            Il n'y a pas une (et une seule) entitée par message
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAWrapProcessedEntity">
+         <!-- 008 -->
+         <assert test="count(ram:AccountingBookCreationDateTime) = 1">
+            Date de création du message manquant
+         </assert>
+         <!-- 009 -->
+         <assert test="count(ram:OriginatorAAAWrapOrganization) = 1">
+            Cardinalité d'originateur incorrecte (1-1 attendu)
+         </assert>
+         <!-- 010 -->
+         <assert test="count(ram:SenderAAAWrapOrganization) = 1">
+            Cardinalité d'émetteur incorrect (1-1 attendu)
+         </assert>
+         <!-- 011 -->
+         <assert test="count(ram:RecipientAAAWrapOrganization) > 0">
+            Cardinalité de destinataire incorrect (1-n attendu)
+         </assert>
+         <!-- 012 -->
+         <assert test="count(ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware) > 0">
+            Identifiant du logiciel manquant
+         </assert>
+      </rule>
+      <rule context="ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware">
+         <!-- 022 -->
+         <assert test="count(ram:Name) = 1">
+            Nom du logiciel manquant pour <value-of select="local-name()"/>
+         </assert>
+         <!-- 023 -->
+         <assert test="count(ram:VersionID) = 1">
+            Numéro de version du logiciel manquant pour <value-of select="local-name()"/>
+         </assert>
+         <!-- 024 -->
+         <assert test="count(ram:ProvidedAAAWrapCertificate) = 1">
+            Attestation du logiciel manquante pour <value-of select="local-name()"/>
+         </assert>
+      </rule>
+      <rule context="ram:SpecifiedAAAWrapDayBook">
+         <!-- 025 -->
+         <assert test="count(ram:Comment) = 1">
+            Commentaire manquant pour le livre <value-of select="ram:ID"/>
+         </assert>
+         <!-- 026 -->
+         <assert test="count(ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod[ram:FunctionCode = 322]) = 1">
+            Période comptable manquante pour <value-of select="ram:ID"/>
+         </assert>
+         <!-- 027 -->
+         <assert test="if(ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod[ram:FunctionCode = 746]) then count(ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod) = 2 else true()">
+            Nombre de périodes incorrect pour <value-of select="ram:ID"/>
+         </assert>
+         <!-- 032 -->
+         <assert test="if(count(ram:SpecifiedAAAWrapAccountingPeriod) = 2) then ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAWrapAccountingCheck else true()">
+            Les totaux de contrôles ne sont pas présents, certes ils sont inutiles mais leur absence ne passera pas inapercue
+         </assert>
+      </rule>
       <rule context="ram:RelatedEvidenceDocument">
          <assert test="ram:TypeCode">
             Type de pièce manquante pour la pièce <value-of select="ram:ID"/>
@@ -116,27 +236,81 @@
       </rule>
    </pattern>
    <pattern>
-      <title>SIREN dans le message/envelope</title>
-      <rule context="ram:OriginatorAAAWrapOrganization">
-         <assert test="string-length(translate(normalize-space(ram:OtherID),' ','')) = 9">
-            Longueur du SIRET/SIREN de la balise <value-of select="ram:OtherID"/> invalide ou absent
+      <title>Cohérence des totaux de contrôles</title>
+      <rule context="ram:SpecifiedAAAWrapAccountingCheck">
+         <!-- 033 -->
+         <assert test="count(ram:TotalDebitAmount) = 1">
+            Total des débits absent (ils ne servent à rien mais leur absence est remarquée)
          </assert>
-         <assert test="sum(for $c in (for $i in (1 to 9) return xs:integer(substring(translate(normalize-space(ram:OtherID),' ',''),$i,1)) * (if ($i mod 2 != 0) then 1 else 2)) return if ($c >= 10) then $c - 9 else $c) mod 10 = 0">
-            Code SIREN <value-of select="ram:OtherID"/> invalide
+         <!-- 035 -->
+         <assert test="count(ram:TotalCreditAmount) = 1">
+            Total des crédits absent (ils ne servent à rien mais leur absence est remarquée)
+         </assert>
+         <assert test="$useless-check/ram:TotalDebitAmount = $useless-check/ram:TotalCreditAmount">
+            Débit n'est pas égal à crédit dans les totaux de contrôles
+         </assert>
+      </rule>
+   </pattern>
+   <pattern>
+      <title>Identifiant des partenaires de l'échange</title>
+      <rule context="ram:AuditAAAWrapOrganization | ram:RepresentativeAAAWrapOrganization | ram:BilledAAAWrapOrganization | ram:PreparerAAAWrapOrganization | ram:OriginatorAAAWrapOrganization | ram:RecipientAAAWrapOrganization | ram:SenderAAAWrapOrganization | ram:OwnerAAAWrapOrganization">
+         <!-- 014 -->
+         <assert test="count(ram:Name) = 1">
+            Nom de l'organisation <value-of select="local-name()"/> manquant
+         </assert>
+         <!-- 015 -->
+         <assert test="count(ram:ID) = 1">
+            SIRET/SIREN manquant pour <value-of select="local-name()"/>
+         </assert>
+         <let name="siretn" value="translate(normalize-space(ram:ID), ' ', '')"/>
+         <let name="siretn-len" value="string-length($siretn)"/>
+         <!-- 016 -->
+         <assert test="$siretn-len = 9 or $siretn-len = 14">
+            Longueur du SIRET/SIREN <value-of select="$siretn"/> invalide
+         </assert>
+         <!-- 017 -->
+         <assert test="sum(for $c in (for $i in (1 to $siretn-len) return xs:integer(substring($siretn, $i, 1)) * (if (($siretn-len - $i + 1) mod 2 != 0) then 1 else 2)) return if ($c >= 10) then $c - 9 else $c) mod 10 = 0">
+            Code SIRET/SIREN <value-of select="$siretn"/> invalide
+         </assert>
+         <!-- 018 -->
+         <assert test="count(ram:PostalAAAAddress) = 1">
+            Adresse postale manquante pour <value-of select="local-name()"/>
+         </assert>
+         <!-- 019 -->
+         <assert test="count(ram:PostalAAAAddress/ram:PostcodeCode) = 1">
+            Adresse postale manquante pour <value-of select="local-name()"/>
+         </assert>
+         <!-- 020 -->
+         <assert test="count(ram:PostalAAAAddress/ram:LineOne) = 1">
+            Adresse postale manquante pour <value-of select="local-name()"/>
+         </assert>
+         <!-- 021 -->
+         <assert test="count(ram:PostalAAAAddress/ram:CityName) = 1">
+            Adresse postale manquante pour <value-of select="local-name()"/>
          </assert>
       </rule>
    </pattern>
    <pattern>
       <title>Cohérence des périodes</title>
       <rule context="ram:SpecifiedAAAPeriod">
-         <assert test="ram:StartDateTime">
-            Période se terminant <value-of select="ram:EndDateTime"/> n'a pas de date de début
+         <!-- 028 -->
+         <assert test="count(ram:StartDateTime) = 1">
+            Date de début de période manquante pour la période se terminant en <value-of select="ram:EndDateTime"/>
          </assert>
-         <assert test="ram:EndDateTime">
-            Période se terminant <value-of select="ram:StartDateTime"/> n'a pas de date de début
+         <!-- 029 -->
+         <assert test="count(ram:EndDateTime) = 1">
+            Date de fin de période manquante pour la période débutant en <value-of select="ram:StartDateTime"/>
+         </assert>
+         <!-- 030 -->
+         <assert test="count(ram:InclusiveIndicator) = 1">
+            Indicateur d'inclusivité manquant pour la période <value-of select="ram:StartDateTime"/>-<value-of select="ram:EndDateTime"/>
+         </assert>
+         <!-- 031 -->
+         <assert test="count(ram:FunctionCode) = 1">
+            Code de fonction manquant pour la période <value-of select="ram:StartDateTime"/>-<value-of select="ram:EndDateTime"/>
          </assert>
          <assert test="xs:dateTime(ram:EndDateTime) >= xs:dateTime(ram:StartDateTime)">
-            Période commence le <value-of select="ram:StartDateTime"/> soit après la fin du <value-of select="ram:StartDateTime"/> ! 
+            Période commence le <value-of select="ram:StartDateTime"/> soit après la fin <value-of select="ram:StartDateTime"/> ! 
          </assert>
       </rule>
    </pattern>

@@ -1,16 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rsm:AAAAccountingMessage xmlns:rsm="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2"
    xmlns:ram="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10"
-   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-   xsi:schemaLocation="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2 file:/Users/bmarchal/Documents/GT4%20doc/uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd">
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
    <rsm:AAAWrapAccountingBook>
       <ram:ID>1</ram:ID>
       <ram:SpecifiedAAAWrapProcessedEntity>
+         <ram:ScenarioIdentificationID>ADNCompta_2013_PreparerIntermediary_Entry</ram:ScenarioIdentificationID>
+         <ram:ScenarioStepNumberNumeric>2</ram:ScenarioStepNumberNumeric>
          <ram:AccountingIdentificationID>349</ram:AccountingIdentificationID>
+         <ram:LocalAccountingCurrencyCode>eur</ram:LocalAccountingCurrencyCode>
+         <ram:AccountingBookCreationDateTime>2012-01-01T24:00:00</ram:AccountingBookCreationDateTime>
          <ram:OriginatorAAAWrapOrganization>
             <ram:Name>Pomme d'API</ram:Name>
+            <ram:ID>422260208</ram:ID>
             <ram:AbbreviatedName>PAPI</ram:AbbreviatedName>
-            <ram:OtherID>422260208</ram:OtherID>
             <ram:PostalAAAAddress>
                <ram:PostcodeCode>45370</ram:PostcodeCode>
                <ram:LineOne>14 Rue Saint André</ram:LineOne>
@@ -20,13 +23,24 @@
          </ram:OriginatorAAAWrapOrganization>
          <ram:RecipientAAAWrapOrganization>
             <ram:Name>Guillaume Tell</ram:Name>
-            <ram:OtherID>12345678900012</ram:OtherID>
+            <ram:ID>73282932000074</ram:ID>
             <ram:PostalAAAAddress>
                <ram:PostcodeCode>75113</ram:PostcodeCode>
                <ram:LineOne>14, Rue de la Flèche</ram:LineOne>
                <ram:CityName>Paris</ram:CityName>
             </ram:PostalAAAAddress>
          </ram:RecipientAAAWrapOrganization>
+         <ram:SenderAAAWrapOrganization>
+            <ram:Name>Pomme d'API</ram:Name>
+            <ram:ID>422260208</ram:ID>
+            <ram:AbbreviatedName>PAPI</ram:AbbreviatedName>
+            <ram:PostalAAAAddress>
+               <ram:PostcodeCode>45370</ram:PostcodeCode>
+               <ram:LineOne>14 Rue Saint André</ram:LineOne>
+               <ram:CityName>Saint André</ram:CityName>
+               <ram:CountryName>France</ram:CountryName>
+            </ram:PostalAAAAddress>
+         </ram:SenderAAAWrapOrganization>
          <ram:IntermediateAAAWrapSoftware>
             <ram:Name>Pomelo</ram:Name>
             <ram:VersionID>10.0</ram:VersionID>
@@ -44,6 +58,9 @@
                <ram:SpecifiedAAAPeriod>
                   <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
                   <ram:EndDateTime>2012-06-30T24:00:00</ram:EndDateTime>
+                  <ram:InclusiveIndicator>true</ram:InclusiveIndicator>
+                  <!-- should be 746 -->
+                  <ram:FunctionCode>322</ram:FunctionCode>
                </ram:SpecifiedAAAPeriod>
             </ram:SpecifiedAAAWrapAccountingPeriod>
          </ram:SpecifiedAAAWrapJournalList>
@@ -54,7 +71,13 @@
                <ram:SpecifiedAAAPeriod>
                   <ram:StartDateTime>2012-01-01T00:00:00</ram:StartDateTime>
                   <ram:EndDateTime>2012-12-31T24:00:00</ram:EndDateTime>
+                  <ram:InclusiveIndicator>true</ram:InclusiveIndicator>
+                  <ram:FunctionCode>322</ram:FunctionCode>
                </ram:SpecifiedAAAPeriod>
+               <ram:SpecifiedAAAWrapAccountingCheck>
+                  <ram:TotalDebitAmount>22646.42</ram:TotalDebitAmount>
+                  <ram:TotalCreditAmount>22646.42</ram:TotalCreditAmount>
+               </ram:SpecifiedAAAWrapAccountingCheck>
             </ram:SpecifiedAAAWrapAccountingPeriod>
          </ram:SpecifiedAAAWrapDayBook>
          <ram:SpecifiedAAAWrapAccountingAccountClassification>
@@ -67,6 +90,9 @@
                <ram:SpecifiedAAAPeriod>
                   <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
                   <ram:EndDateTime>2012-06-30T24:00:00</ram:EndDateTime>
+                  <ram:InclusiveIndicator>true</ram:InclusiveIndicator>
+                  <!-- should be 746 -->
+                  <ram:FunctionCode>322</ram:FunctionCode>
                </ram:SpecifiedAAAPeriod>
             </ram:SpecifiedAAAWrapAccountingPeriod>
          </ram:SpecifiedAAAWrapLedger>

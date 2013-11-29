@@ -14,6 +14,36 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>exemples/message.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>ADN/ok%201/DossierADN.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -30,21 +60,6 @@
                             <scenarioAssociation>
                                 <field name="url">
                                     <String>ADN/ok%201/ecr.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Scenario 1 : Emetteur vers intermédiaire</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>exemples/</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -104,7 +119,7 @@
                                                         <Integer>2</Integer>
                                                     </field>
                                                     <field name="uri">
-                                                        <String>${pdu}/data/standard/AAAAccountingEntryMessage_2p0.xsd</String>
+                                                        <String>${pdu}/../../uncefact11a/data/standard/AAAAccountingEntryMessage_2p0.xsd</String>
                                                     </field>
                                                 </validationUnitSchema>
                                             </field>
@@ -148,7 +163,7 @@
                                                         <Integer>2</Integer>
                                                     </field>
                                                     <field name="uri">
-                                                        <String>${pdu}/data/standard/AAAChartOfAccountsMessage_2p0.xsd</String>
+                                                        <String>${pdu}/../../uncefact11a/data/standard/AAAChartOfAccountsMessage_2p0.xsd</String>
                                                     </field>
                                                 </validationUnitSchema>
                                             </field>
@@ -192,7 +207,7 @@
                                                         <Integer>2</Integer>
                                                     </field>
                                                     <field name="uri">
-                                                        <String>${pdu}/data/standard/AAAAccountingMessage_2p0.xsd</String>
+                                                        <String>${pdu}/../../uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd</String>
                                                     </field>
                                                 </validationUnitSchema>
                                             </field>
@@ -258,9 +273,9 @@
     </meta>
     <projectTree name="attestation.xpr">
         <folder masterFiles="true" name="Master Files">
-            <file name="data/standard/AAAAccountingEntryMessage_2p0.xsd"/>
+            <file name="../../uncefact11a/data/standard/AAAAccountingEntryMessage_2p0.xsd"/>
+            <file name="../../uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd"/>
         </folder>
-        <folder path="ADN/"/>
         <folder path="exemples/"/>
         <file name="controles-metier/uncefact11a.sch"/>
     </projectTree>
