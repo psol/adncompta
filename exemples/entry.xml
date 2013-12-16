@@ -15,28 +15,34 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>5643</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-10-24T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>1</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>ACH</ram:JournalID>
 					<ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Achat de Logiciel Gestion de Parcel</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>17</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
 						<ram:RelatedPostedAccountingLineMonetaryValue>
 							<ram:LocalAccountingCurrencyAmount>75.93</ram:LocalAccountingCurrencyAmount>
 							<ram:VoucherCurrencyAmount currencyID="USD">100.00</ram:VoucherCurrencyAmount>
-							<ram:DebitCreditCode>29</ram:DebitCreditCode>
+							<ram:DebitCreditCode>31</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>605000</ram:ID>
-								<ram:TypeCode>1</ram:TypeCode>
+								<ram:SubAccountID>ID</ram:SubAccountID>
+								<ram:Name>Picsou</ram:Name>
+								<ram:TypeCode>2</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Achat de Logiciel Gestion de Parcel</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>18</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -48,6 +54,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>401000</ram:ID>
 								<ram:SubAccountID>DR</ram:SubAccountID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -60,27 +67,38 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I1</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-02-15T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>2</ram:ID>
 					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>VENT</ram:JournalID>
 					<ram:ValueDateDateTime>2012-02-15T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>1</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
+						<ram:RepeatedPortionedMonetaryInstalment>
+							<ram:PaymentAmount>20.20</ram:PaymentAmount>
+						</ram:RepeatedPortionedMonetaryInstalment>
+						<ram:RepeatedPortionedMonetaryInstalment>
+							<ram:PaymentAmount>19.00</ram:PaymentAmount>
+						</ram:RepeatedPortionedMonetaryInstalment>
 						<ram:RelatedPostedAccountingLineMonetaryValue>
 							<ram:LocalAccountingCurrencyAmount>39.20</ram:LocalAccountingCurrencyAmount>
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>445660</ram:ID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>2</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -89,6 +107,7 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>622000</ram:ID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -98,11 +117,16 @@
 							<ram:CategoryCode>S</ram:CategoryCode>
 							<ram:SpecifiedBookedAccountingAccount>
 								<ram:ID>622000</ram:ID>
+								<ram:DerivedLinkedReport>
+									<ram:Name>Non</ram:Name>
+									<ram:ItemID>Si</ram:ItemID>
+								</ram:DerivedLinkedReport>
 							</ram:SpecifiedBookedAccountingAccount>
 						</ram:RelatedFiscalTax>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>3</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -111,12 +135,14 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>637000</ram:ID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>4</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -125,12 +151,14 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>445710</ram:ID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>5</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -139,6 +167,7 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>701000</ram:ID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -153,6 +182,7 @@
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Pommes Pink Lady</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>6</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -163,6 +193,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>411000</ram:ID>
 								<ram:SubAccountID>COOPBW</ram:SubAccountID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -175,13 +206,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I2</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-02-29T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>3</ram:ID>
 					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>TRES</ram:JournalID>
 					<ram:ValueDateDateTime>2012-02-29T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>7</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -191,12 +225,15 @@
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512PICSOU</ram:ID>
+								<ram:SubAccountID>PICSOU</ram:SubAccountID>
+								<ram:Name>Minnie</ram:Name>
 								<ram:TypeCode>2</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR - 76 - Coopérative (Blue Whale)</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>8</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -207,6 +244,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>411000</ram:ID>
 								<ram:SubAccountID>COOPBW</ram:SubAccountID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -219,13 +257,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I3</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-10-24T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>7</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>TRES</ram:JournalID>
 					<ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>15</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -236,12 +277,15 @@
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512PICSOU</ram:ID>
+								<ram:SubAccountID>PICSOU</ram:SubAccountID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>2</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR - 5643Z - Digital river</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>16</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -253,6 +297,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>401000</ram:ID>
 								<ram:SubAccountID>DR</ram:SubAccountID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -265,13 +310,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I4</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-03-31T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>9</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>TRES</ram:JournalID>
 					<ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Paye de mars 2012</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>11</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -280,12 +328,14 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>431000</ram:ID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Paye de mars 2012</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>12</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -294,12 +344,14 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>645000</ram:ID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Paye de mars 2012</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>13</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -308,12 +360,14 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>641100</ram:ID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>Paye de mars 2012</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>14</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -324,6 +378,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>421000</ram:ID>
 								<ram:SubAccountID>001</ram:SubAccountID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -336,13 +391,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I5</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-03-31T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>10</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>TRES</ram:JournalID>
 					<ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>9</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -352,12 +410,15 @@
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512PICSOU</ram:ID>
+								<ram:SubAccountID>PICSOU</ram:SubAccountID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>2</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>VIR - 622Z - Donald Duck</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>10</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -368,6 +429,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>421000</ram:ID>
 								<ram:SubAccountID>001</ram:SubAccountID>
+								<ram:AbbreviatedName>PICSOU2</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -380,13 +442,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>34</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-10-30T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>11</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>ACH</ram:JournalID>
 					<ram:ValueDateDateTime>2012-10-30T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment/>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>19</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -395,6 +460,7 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>628100</ram:ID>
+								<ram:Name>Encore !</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -409,6 +475,7 @@
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment/>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 						<ram:LineNumeric>20</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -417,12 +484,14 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>445660</ram:ID>
+								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment/>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>21</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -433,6 +502,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>401000</ram:ID>
 								<ram:SubAccountID>EDIFIC</ram:SubAccountID>
+								<ram:AbbreviatedName>EDIFICAS</ram:AbbreviatedName>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
@@ -445,13 +515,16 @@
 			<ram:RelatedEvidenceDocument>
 				<ram:ID>I7</ram:ID>
 				<ram:TypeCode>533</ram:TypeCode>
+				<ram:CreationDateTime>2012-11-30T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
 					<ram:ID>12</ram:ID>
-					<ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>TRES</ram:JournalID>
 					<ram:ValueDateDateTime>2012-11-30T00:00:00</ram:ValueDateDateTime>
+					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>PRE</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>22</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -461,12 +534,15 @@
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512PICSOU</ram:ID>
+								<ram:SubAccountID>PICSOU</ram:SubAccountID>
+								<ram:AbbreviatedName>DISNEY</ram:AbbreviatedName>
 								<ram:TypeCode>2</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
 					<ram:DetailedPostedAccountingEntryLine>
 						<ram:Comment>PRE - 34Z - Edificas</ram:Comment>
+						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>23</ram:LineNumeric>
 						</ram:SpecifiedReferenceAccountingLineIndex>
@@ -477,6 +553,7 @@
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>401000</ram:ID>
 								<ram:SubAccountID>EDIFIC</ram:SubAccountID>
+								<ram:Name>Something</ram:Name>
 								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
