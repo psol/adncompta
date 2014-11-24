@@ -8,6 +8,7 @@
          <ram:ScenarioIdentificationID>ADNCompta_2013_PreparerIntermediary_Entry</ram:ScenarioIdentificationID>
          <ram:ScenarioStepNumberNumeric>2</ram:ScenarioStepNumberNumeric>
          <ram:AccountingIdentificationID>349</ram:AccountingIdentificationID>
+         <ram:AccountingMethod>auxiliaire</ram:AccountingMethod>
          <ram:LocalAccountingCurrencyCode>eur</ram:LocalAccountingCurrencyCode>
          <ram:AccountingBookCreationDateTime>2012-01-01T24:00:00</ram:AccountingBookCreationDateTime>
          <ram:OriginatorAAAWrapOrganization>

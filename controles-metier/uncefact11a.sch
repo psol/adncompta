@@ -22,15 +22,13 @@
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2" prefix="rsmmsg"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingEntryMessage:2" prefix="rsment"/>
+   <!-- TODO refactor: use regex instead -->
    <let name="debitCodes" value="'29', '31', '32'"/>
    <let name="creditCodes" value="'30', '33', '34'"/>
    <pattern>
       <title>Numéros de compte</title>
-      <let name="first-account-length" value="if (count(//ram:BookingBookedAccountingAccount) > 0) then string-length((//ram:BookingBookedAccountingAccount[ram:TypeCode = 1]/ram:ID)[1]) else if (count(//ram:IncludedAAALedgerAccountingAccount)) then string-length((//ram:IncludedAAALedgerAccountingAccount[ram:TypeCode = 1]/ram:ID)[1]) else string-length((//ram:RelatedAAAChartOfAccountsAccountingAccount[ram:TypeCode = 1]/ram:ID)[1])"/>
-      <rule context="ram:BookingBookedAccountingAccount[ram:TypeCode = 1] | ram:RelatedAAAChartOfAccountsAccountingAccount[ram:TypeCode = 1] | ram:IncludedAAALedgerAccountingAccount[ram:TypeCode = 1]">
-         <assert test="not(starts-with(ram:ID,'0')) and not(starts-with(ram:ID,'9'))">
-            Compte <value-of select="ram:ID"/> : mauvais début
-         </assert>
+      <let name="first-account-length" value="if (count(//ram:BookingBookedAccountingAccount) > 0) then string-length((//ram:BookingBookedAccountingAccount/ram:ID)[1]) else if (count(//ram:IncludedAAALedgerAccountingAccount)) then string-length((//ram:IncludedAAALedgerAccountingAccount/ram:ID)[1]) else string-length((//ram:RelatedAAAChartOfAccountsAccountingAccount/ram:ID)[1])"/>
+      <rule context="ram:BookingBookedAccountingAccount | ram:RelatedAAAChartOfAccountsAccountingAccount | ram:IncludedAAALedgerAccountingAccount">
          <!-- 058 -->
          <assert test="string-length(ram:ID) > 2 and string-length(ram:ID) &lt; 13">
             Err 058 : Compte <value-of select="ram:ID"/> : longueur incorrecte
@@ -46,15 +44,19 @@
       </rule>
       <rule context="ram:DetailedPostedAccountingEntryLine[ram:RelatedFiscalTax]">
          <let name="account-id" value="ram:RelatedPostedAccountingLineMonetaryValue/ram:BookingBookedAccountingAccount/ram:ID"/>
+         <!--
          <assert test="starts-with($account-id,'6') or starts-with($account-id,'7')">
             La ligne <value-of select="position()"/> contient de la TVA mais n'est pas un compte de TVA
          </assert>
+         -->
       </rule>
       <rule context="ram:RelatedPostedAccountingLineMonetaryValue[ram:MatchingID]">
          <let name="account-id" value="ram:BookingBookedAccountingAccount/ram:ID"/>
+         <!--
          <assert test="starts-with($account-id,'4') or starts-with($account-id,'5')">
             La ligne <value-of select="ram:Comment"/> a un lettrage mais n'est pas un compte TVA ou bancaire
          </assert>
+         -->
       </rule>
       <rule context="ram:RelatedAAAChartOfAccountsAccountingAccount">
          <assert test="ram:Name or ram:AbbreviatedName">
@@ -63,34 +65,15 @@
       </rule>
    </pattern>
    <pattern>
-      <title>Numéro de comptes pour les comptes auxiliaires</title>
-      <rule context="ram:BookingBookedAccountingAccount[ram:TypeCode = 2] | ram:RelatedAAAChartOfAccountsAccountingAccount[ram:TypeCode = 2] | ram:IncludedAAALedgerAccountingAccount[ram:TypeCode = 2]">
-         <!-- 059 A et 059 B -->
-         <assert test="string-length(ram:ID) > 0 and string-length(ram:ID) &lt; 18">
-            Err 059 A : Compte <value-of select="ram:ID"/> : longueur incorrecte
-         </assert>
-         <assert test="normalize-space(ram:ID) != ''">
-            Err 059 B : Compte <value-of select="ram:ID"/> : compte composé d'un espace !
-         </assert>
-         <!-- 060 -->
-         <assert test="count(ram:SubAccountID) = 1">
-            Err 060 : Compte auxiliaire de <value-of select="ram:ID"/> manquant
-         </assert>
-         <!-- 061 -->
-         <assert test="string-length(ram:SubAccountID) > 0 and string-length(ram:SubAccountID) &lt; 18">
-            Err 061 : Compte auxiliaire <value-of select="ram:SubAccountID"/> : longueur incorrecte
-         </assert>
-      </rule>
-   </pattern>
-   <pattern>
       <title>Numéro de comptes pour les comptes auxiliaires (méthode alternative)</title>
       <rule context="ram:BookingBookedAccountingAccount | ram:RelatedAAAChartOfAccountsAccountingAccount | ram:IncludedAAALedgerAccountingAccount">
          <!-- 061 -->
          <assert test="if(count(ram:SubAccountID) > 0) then string-length(ram:SubAccountID) > 0 and string-length(ram:SubAccountID) &lt; 18 else true()">
-            Compte auxiliaire <value-of select="ram:SubAccountID"/> : longueur incorrecte
+            Err 061 : Compte auxiliaire <value-of select="ram:SubAccountID"/> : longueur incorrecte
          </assert>
+         <!-- 060 -->
          <assert test="if(count(ram:SubAccountID) > 0) then normalize-space(ram:SubAccountID) != '' else true()">
-            Compte <value-of select="ram:ID"/> : compte auxiliaire composé d'un espace !
+            Err 060 : Compte <value-of select="ram:ID"/> : compte auxiliaire composé d'un espace !
          </assert>
          <!-- 062 -->
          <assert test="count(ram:Name) = 1 or count(ram:AbbreviatedName) = 1">
@@ -186,14 +169,14 @@
                        else true()">
             Err 034 : Total calculés des débits (<value-of select="sum($values[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalDebitAmount"/>)
          </assert>
-         <!-- 036 et 036 B -->
+         <!-- 036 et 059 -->
          <assert test="if($useless-check)
             then abs(number($useless-check/ram:TotalDebitAmount) - sum(for $v in $values[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount return number($v))) lt 0.1
                        else true()">
             Err 036 : Total calculés des crédits (<value-of select="sum($values[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalCreditAmount"/>)
          </assert>
          <assert test="$useless-check/ram:TotalDebitAmount = $useless-check/ram:TotalCreditAmount">
-            Err 036 B : Débit n'est pas égal à crédit dans les totaux de contrôles
+            Err 059 : Débit n'est pas égal à crédit dans les totaux de contrôles
          </assert>
       </rule>
    </pattern>
@@ -223,12 +206,16 @@
             Err 011 : Cardinalité de destinataire incorrect (1-n attendu)
          </assert>
          <!-- 070 -->
-         <assert test="if(number(../ram:ScenarioStepNumberNumeric) = 3) then count(ram:PreparerAAAWrapOrganization) > 0 else true">
+         <assert test="if(number(../ram:ScenarioStepNumberNumeric) = 3) then count(ram:PreparerAAAWrapOrganization) > 0 else true()">
             Err 070 : Cardinalité de préparateur incorrect (1-n attendu pour les scénarios avec intermédiaire)
          </assert>
          <!-- 012 -->
          <assert test="count(ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware) > 0">
             Err 012 : Identifiant du logiciel manquant
+         </assert>
+         <!-- 079 -->
+         <assert test="count(ram:AccountingMethod) > 0">
+            Err 079 : Méthode comptable manquante
          </assert>
       </rule>
       <rule context="ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware">
@@ -446,10 +433,10 @@
    <pattern>
       <title>Liste de codes</title>
       <!-- 064 -->
-      <let name="account-types" value="('1', '2', '6')"/>
+      <let name="account-types" value="'1'"/>
       <rule context="ram:BookingBookedAccountingAccount">
-         <assert test="exists(index-of($account-types, ram:TypeCode))">
-            Err 064 : Le type de compte doit être un des suivants : (<value-of select="string-join($account-types, ', ')" />) 1 général, 2 auxiliaire.
+         <assert test="ram:TypeCode = 1">
+            Err 064 : Le type de comptabilité est <value-of select="ram:TypeCode"/> mais seul 1 (comptabilité générale) est permis pour le moment
          </assert>
       </rule>
       <rule context="ram:JustifiedPostedAccountingEntry">
@@ -458,22 +445,13 @@
             Err 042 : Ecriture non validée
          </assert>
       </rule>
+   </pattern>
+   <pattern>
+      <title>Code débit/crédit</title>
       <!-- 053 -->
-      <rule context="ram:RelatedPostedAccountingLineMonetaryValue[not(empty(index-of(('1', '2'), ram:BookingBookedAccountingAccount/ram:TypeCode)))]">
-         <assert test="not(empty(index-of(('29', '30', '31', '32', '33', '34'), ram:DebitCreditCode)))">
-            Err 053 : Code debit/credit inacceptable <value-of select="ram:DebitCreditCode"/>
-         </assert>
-      </rule>
-      <!-- 054 -->
-      <rule context="ram:RelatedPostedAccountingLineMonetaryValue[ram:BookingBookedAccountingAccount/ram:TypeCode = '6']">
-         <assert test="not(empty(index-of(('29', '30', '31', '33'), ram:DebitCreditCode)))">
-            Err 054 : Code debit/credit inacceptable <value-of select="ram:DebitCreditCode"/>
-         </assert>
-      </rule>
-      <!-- 052 -->
       <rule context="ram:RelatedPostedAccountingLineMonetaryValue">
-         <assert test="not(empty(index-of(('29', '30'), ram:DebitCreditCode)))">
-            Err 052 : Code debit/credit inacceptable <value-of select="ram:DebitCreditCode"/>
+         <assert test="matches(ram:DebitCreditCode, '29|30|31|32|33|34')">
+            Err 053 : Code debit/credit inacceptable <value-of select="ram:DebitCreditCode"/>
          </assert>
       </rule>
    </pattern>

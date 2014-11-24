@@ -36,7 +36,7 @@
 								<ram:ID>605000</ram:ID>
 								<ram:SubAccountID>ID</ram:SubAccountID>
 								<ram:Name>Picsou</ram:Name>
-								<ram:TypeCode>2</ram:TypeCode>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
@@ -224,10 +224,10 @@
 							<ram:DebitCreditCode>29</ram:DebitCreditCode>
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
-								<ram:ID>512PICSOU</ram:ID>
+								<ram:ID>512000</ram:ID>
 								<ram:SubAccountID>PICSOU</ram:SubAccountID>
 								<ram:Name>Minnie</ram:Name>
-								<ram:TypeCode>2</ram:TypeCode>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
@@ -276,10 +276,10 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
-								<ram:ID>512PICSOU</ram:ID>
+								<ram:ID>512000</ram:ID>
 								<ram:SubAccountID>PICSOU</ram:SubAccountID>
 								<ram:AbbreviatedName>Something</ram:AbbreviatedName>
-								<ram:TypeCode>2</ram:TypeCode>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
@@ -409,10 +409,10 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
-								<ram:ID>512PICSOU</ram:ID>
+								<ram:ID>512000</ram:ID>
 								<ram:SubAccountID>PICSOU</ram:SubAccountID>
 								<ram:Name>Something</ram:Name>
-								<ram:TypeCode>2</ram:TypeCode>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
@@ -533,10 +533,15 @@
 							<ram:DebitCreditCode>30</ram:DebitCreditCode>
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
-								<ram:ID>512PICSOU</ram:ID>
+								<ram:ID>512000</ram:ID>
+								<ram:TypeCode>1</ram:TypeCode>
+								<ram:Name>Inconnu</ram:Name>
+							</ram:BookingBookedAccountingAccount>
+							<ram:BookingBookedAccountingAccount>
+								<ram:ID>512000</ram:ID>
 								<ram:SubAccountID>PICSOU</ram:SubAccountID>
 								<ram:AbbreviatedName>DISNEY</ram:AbbreviatedName>
-								<ram:TypeCode>2</ram:TypeCode>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 						</ram:RelatedPostedAccountingLineMonetaryValue>
 					</ram:DetailedPostedAccountingEntryLine>
