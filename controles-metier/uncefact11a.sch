@@ -16,12 +16,13 @@
    http://www.oyxgenxml.com
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2014b</title>
+   <title>Validation de l'écriture comptable, niveau 1, 2014c</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingMessage:2" prefix="rsmmsg"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAAccountingEntryMessage:2" prefix="rsment"/>
+   <ns uri="urn:un:unece:uncefact:data:standard:AAALedgerMessage:2" prefix="rsmldg"/>
    <!-- TODO refactor: use regex instead -->
    <let name="debitCodes" value="'29', '31', '32'"/>
    <let name="creditCodes" value="'30', '33', '34'"/>
@@ -131,17 +132,17 @@
          </assert>
       </rule>
    </pattern>
-   <pattern>
+   <pattern abstract="true" id="interfiles">
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
          <!-- 071 - 072 - 073 - 074 -->
          <let name="tpath1" value="tokenize(document-uri(/), '/')"/>
          <let name="tpath2" value="remove($tpath1, count($tpath1))"/>
          <let name="path" value="concat(string-join($tpath2, '/'), '/')"/>
-         <let name="period" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
+         <let name="period" value="$entitytag/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAPeriod"/>
          <let name="period-start" value="xs:dateTime($period/ram:StartDateTime)"/>
          <let name="period-end" value="xs:dateTime($period/ram:EndDateTime)"/>
-         <let name="useless-check" value="ram:SpecifiedAAAWrapDayBook/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAWrapAccountingCheck"/>
+         <let name="useless-check" value="$entitytag/ram:SpecifiedAAAWrapAccountingPeriod/ram:SpecifiedAAAWrapAccountingCheck"/>
          <assert test="if(ram:SpecifiedAAAWrapJournalList) then doc-available(concat($path,ram:SpecifiedAAAWrapJournalList/ram:ID)) else true()">
             Err 071: Document 'JournalList' <value-of select="ram:SpecifiedAAAWrapJournalList/ram:ID"/> manquant
          </assert>
@@ -155,30 +156,40 @@
             Err 074 : Document 'Ledger' <value-of select="ram:SpecifiedAAAWrapLedger/ram:ID"/> manquant
          </assert>
          <!-- 076 - 077 -->
-         <let name="value-dates" value="document(concat($path,ram:SpecifiedAAAWrapDayBook/ram:ID))/rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:ValueDateDateTime"/>
+         <let name="value-dates" value="document(concat($path, $entitytag/ram:ID))/$valuedatepath"/>
          <assert test="every $v in $value-dates satisfies xs:dateTime($v) >= $period-start">
-            Err 076 : Date de valeur d'au moins une écriture antérieure au début de la période comptable (<value-of select="$period-start"/>)
+            Err 076 : Date de valeur d'au moins une écriture de <value-of select="$entitytag/ram:ID"/> antérieure au début de la période comptable (<value-of select="$period-start"/>)
          </assert>
          <assert test="every $v in $value-dates satisfies xs:dateTime($v) &lt;= $period-end">
-            Err 077 : Date de valeur d'au moins une écriture postérieure au début de la période comptable (<value-of select="$period-end"/>)
+            Err 077 : Date de valeur d'au moins une écriture de <value-of select="$entitytag/ram:ID"/> postérieure au début de la période comptable (<value-of select="$period-end"/>)
          </assert>
-         <let name="values" value="document(concat($path, ram:SpecifiedAAAWrapDayBook/ram:ID))/rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue"/>
+         <let name="values" value="document(concat($path, $entitytag/ram:ID))/$monetaryvaluepath"/>
          <!-- 034 -->
          <assert test="if($useless-check)
             then abs(number($useless-check/ram:TotalDebitAmount) - sum(for $v in $values[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount return number($v))) lt 0.1
-                       else true()">
-            Err 034 : Total calculés des débits (<value-of select="sum($values[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalDebitAmount"/>)
+            else true()">
+            Err 034 : Total calculés des débits de <value-of select="$entitytag/ram:ID"/> (<value-of select="sum($values[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalDebitAmount"/>)
          </assert>
          <!-- 036 et 059 -->
          <assert test="if($useless-check)
             then abs(number($useless-check/ram:TotalDebitAmount) - sum(for $v in $values[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount return number($v))) lt 0.1
-                       else true()">
-            Err 036 : Total calculés des crédits (<value-of select="sum($values[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalCreditAmount"/>)
+            else true()">
+            Err 036 : Total calculés des crédits de <value-of select="$entitytag/ram:ID"/> (<value-of select="sum($values[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount)"/>) différent du total annoncé (<value-of select="$useless-check/ram:TotalCreditAmount"/>)
          </assert>
          <assert test="$useless-check/ram:TotalDebitAmount = $useless-check/ram:TotalCreditAmount">
             Err 059 : Débit n'est pas égal à crédit dans les totaux de contrôles
          </assert>
       </rule>
+   </pattern>
+   <pattern is-a="interfiles" id="entry-interfiles">
+      <param name="entitytag" value="ram:SpecifiedAAAWrapDayBook"/>
+      <param name="valuedatepath" value="rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:ValueDateDateTime"/>
+      <param name="monetaryvaluepath" value="rsment:AAAAccountingEntryMessage/rsment:AAAEntryDayBook/ram:IncludedOriginatorAccountingVoucher/ram:RelatedEvidenceDocument/ram:JustifiedPostedAccountingEntry/ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue"/>
+   </pattern>
+   <pattern is-a="interfiles" id="ledger-interfiles">
+      <param name="entitytag" value="ram:SpecifiedAAAWrapLedger"/>
+      <param name="valuedatepath" value="rsmldg:AAALedgerMessage/rsmldg:AAALedgerLedger/ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine/ram:ConnectedAAALedgerAccountingEntry/ram:ValueDateDateTime"/>
+      <param name="monetaryvaluepath" value="rsmldg:AAALedgerMessage/rsmldg:AAALedgerLedger/ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine/ram:RelatedAAALedgerAccountingLineMonetaryValue"/>
    </pattern>
    <pattern>
       <title>Autres attributs rendus obligatoires hors schéma</title>
@@ -232,7 +243,7 @@
             Err 024 : Attestation du logiciel manquante pour <value-of select="local-name()"/>
          </assert>
       </rule>
-      <rule context="ram:SpecifiedAAAWrapDayBook">
+      <rule context="ram:SpecifiedAAAWrapDayBook | ram:SpecifiedAAAWrapLedger">
          <!-- 025 -->
          <assert test="count(ram:Comment) = 1">
             Err 025 : Commentaire manquant pour le livre <value-of select="ram:ID"/>
@@ -262,6 +273,21 @@
          <!-- 039 -->
          <assert test="count(ram:IncludedOriginatorAccountingVoucher) > 0">
             Err 039 : Voucher manquant pour le livre comptable <value-of select="ram:ID"/>
+         </assert>
+      </rule>
+      <!-- TODO implement as an abstract pattern! -->
+      <rule context="rsmldg:AAALedgerLedger">
+         <!-- 085 -->
+         <assert test="count(ram:ID) = 1">
+            Err 085 : Identifiant du livre comptable <value-of select="ram:Comment"/> manquant
+         </assert>
+         <!-- 086 -->
+         <assert test="count(ram:Comment) = 1">
+            Err 086 : Commentaire du livre comptable <value-of select="ram:ID"/> manquant
+         </assert>
+         <!-- 087 -->
+         <assert test="count(ram:IncludedAAALedgerAccountingAccount) > 0">
+            Err 087 : Voucher manquant pour le livre comptable <value-of select="ram:ID"/>
          </assert>
       </rule>
       <rule context="ram:IncludedOriginatorAccountingVoucher">
@@ -404,7 +430,7 @@
          <assert test="count(ram:FunctionCode) = 1">
             Err 031 : Code de fonction manquant pour la période <value-of select="ram:StartDateTime"/>-<value-of select="ram:EndDateTime"/>
          </assert>
-         <!-- 075 -->
+          <!-- 075 -->
          <assert test="xs:dateTime(ram:EndDateTime) >= xs:dateTime(ram:StartDateTime)">
             Err 075 : Période commence le <value-of select="ram:StartDateTime"/> soit après la fin <value-of select="ram:StartDateTime"/> ! 
          </assert>
