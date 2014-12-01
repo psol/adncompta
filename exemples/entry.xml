@@ -523,7 +523,6 @@
 					<ram:ValueDateDateTime>2012-11-30T00:00:00</ram:ValueDateDateTime>
 					<ram:ValidationDateTime>2012-12-20T00:00:00</ram:ValidationDateTime>
 					<ram:DetailedPostedAccountingEntryLine>
-						<ram:Comment>PRE</ram:Comment>
 						<ram:CategoryCode>1</ram:CategoryCode>
 						<ram:SpecifiedReferenceAccountingLineIndex>
 							<ram:LineNumeric>22</ram:LineNumeric>
@@ -534,8 +533,8 @@
 							<ram:MatchingID>31/12/2012</ram:MatchingID>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512000</ram:ID>
-								<ram:TypeCode>1</ram:TypeCode>
 								<ram:Name>Inconnu</ram:Name>
+								<ram:TypeCode>1</ram:TypeCode>
 							</ram:BookingBookedAccountingAccount>
 							<ram:BookingBookedAccountingAccount>
 								<ram:ID>512000</ram:ID>

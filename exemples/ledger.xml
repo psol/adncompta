@@ -13,7 +13,7 @@
             <ram:Comment>My line</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>1</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>ACH</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Achats</ram:Purpose>
@@ -37,10 +37,11 @@
             <ram:Comment>Ecriture 7</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>7</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I3</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -66,10 +67,11 @@
             <ram:Comment>Ecriture 11</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>11</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>ACH</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-30T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Achats</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>34</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -88,10 +90,11 @@
             <ram:Comment>Ecriture 12</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>12</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-11-30T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I7</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -195,10 +198,11 @@
             <ram:Comment>Ecriture 9</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>9</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I4</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -217,10 +221,11 @@
             <ram:Comment>Ecriture 10</ram:Comment>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>10</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I5</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -243,10 +248,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>9</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I4</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -269,10 +275,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>11</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>ACH</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-30T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Achat</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>34</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -345,10 +352,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>7</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I3</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -367,10 +375,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>10</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I5</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -388,10 +397,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>12</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-11-30T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I7</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -414,10 +424,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>1</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>ACH</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Achats</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>5643</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -468,10 +479,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>11</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>ACH</ram:JournalID>
                <ram:ValueDateDateTime>2012-10-30T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Achats</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>34</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -521,10 +533,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>9</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I4</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>
@@ -547,10 +560,11 @@
          <ram:IncludedAAALedgerAccountingEntryLine>
             <ram:ConnectedAAALedgerAccountingEntry>
                <ram:ID>9</ram:ID>
-               <ram:ProcessingStatusCode>2</ram:ProcessingStatusCode>
+               <ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
                <ram:JournalID>TRES</ram:JournalID>
                <ram:ValueDateDateTime>2012-03-31T00:00:00</ram:ValueDateDateTime>
                <ram:Purpose>Trésorerie</ram:Purpose>
+               <ram:ValidationDateTime>2012-12-26T00:00:00</ram:ValidationDateTime>
                <ram:JustificationAAALedgerDocument>
                   <ram:ID>I4</ram:ID>
                   <ram:TypeCode>533</ram:TypeCode>

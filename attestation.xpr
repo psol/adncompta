@@ -14,11 +14,26 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/message.xml</String>
+                                    <String>exemples/ledger.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Scenario 1 : Emetteur vers intermédiaire (message)</String>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (ledger)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/Users/ESM/Desktop/Nouveau%20dossier/ECRITURE1DOSSIER_1052014.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -34,6 +49,66 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>../../fichiers/Ecritures.XML</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/Ecritures.XML</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/ECRITURE1DOSSIER_1052014.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/message.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (message)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -189,6 +264,106 @@
                                                         <Integer>2</Integer>
                                                     </field>
                                                     <field name="uri">
+                                                        <String>${pdu}/../../uncefact11a/data/standard/AAALedgerMessage_2p0.xsd</String>
+                                                    </field>
+                                                </validationUnitSchema>
+                                            </field>
+                                        </validationUnit>
+                                        <validationUnit>
+                                            <field name="validationType">
+                                                <validationUnitType>
+                                                    <field name="validationInputType">
+                                                        <String>text/xml</String>
+                                                    </field>
+                                                </validationUnitType>
+                                            </field>
+                                            <field name="url">
+                                                <String>${currentFileURL}</String>
+                                            </field>
+                                            <field name="validationEngine">
+                                                <validationEngine>
+                                                    <field name="engineType">
+                                                        <String>&lt;Default engine></String>
+                                                    </field>
+                                                    <field name="allowsAutomaticValidation">
+                                                        <Boolean>true</Boolean>
+                                                    </field>
+                                                </validationEngine>
+                                            </field>
+                                            <field name="allowAutomaticValidation">
+                                                <Boolean>true</Boolean>
+                                            </field>
+                                            <field name="extensions">
+                                                <null/>
+                                            </field>
+                                            <field name="validationSchema">
+                                                <validationUnitSchema>
+                                                    <field name="dtdSchemaPublicID">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="schematronPhase">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="type">
+                                                        <Integer>7</Integer>
+                                                    </field>
+                                                    <field name="uri">
+                                                        <String>${pdu}/controles-metier/uncefact11a.sch</String>
+                                                    </field>
+                                                </validationUnitSchema>
+                                            </field>
+                                        </validationUnit>
+                                    </list>
+                                </field>
+                                <field name="type">
+                                    <String>Validation_scenario</String>
+                                </field>
+                                <field name="name">
+                                    <String>Scenario 1 : Emetteur vers intermédiaire (ledger)</String>
+                                </field>
+                            </validationScenario>
+                            <validationScenario>
+                                <field name="pairs">
+                                    <list>
+                                        <validationUnit>
+                                            <field name="validationType">
+                                                <validationUnitType>
+                                                    <field name="validationInputType">
+                                                        <String>text/xml</String>
+                                                    </field>
+                                                </validationUnitType>
+                                            </field>
+                                            <field name="url">
+                                                <String>${currentFileURL}</String>
+                                            </field>
+                                            <field name="validationEngine">
+                                                <validationEngine>
+                                                    <field name="engineType">
+                                                        <String>&lt;Default engine></String>
+                                                    </field>
+                                                    <field name="allowsAutomaticValidation">
+                                                        <Boolean>true</Boolean>
+                                                    </field>
+                                                </validationEngine>
+                                            </field>
+                                            <field name="allowAutomaticValidation">
+                                                <Boolean>true</Boolean>
+                                            </field>
+                                            <field name="extensions">
+                                                <null/>
+                                            </field>
+                                            <field name="validationSchema">
+                                                <validationUnitSchema>
+                                                    <field name="dtdSchemaPublicID">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="schematronPhase">
+                                                        <null/>
+                                                    </field>
+                                                    <field name="type">
+                                                        <Integer>2</Integer>
+                                                    </field>
+                                                    <field name="uri">
                                                         <String>${pdu}/../../uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd</String>
                                                     </field>
                                                 </validationUnitSchema>
@@ -257,6 +432,9 @@
         <folder masterFiles="true" name="Master Files">
             <file name="../../uncefact11a/data/standard/AAAAccountingEntryMessage_2p0.xsd"/>
             <file name="../../uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd"/>
+            <file name="../../uncefact11a/data/standard/AAALedgerMessage_2p0.xsd"/>
+            <file name="exemples/Users/ESM/Desktop/Nouveau%20dossier/ECRITURE1DOSSIER_1052014.xml"/>
+            <file name="exemples/Ecritures.XML"/>
         </folder>
         <folder path="exemples/"/>
         <file name="controles-metier/uncefact11a.sch"/>

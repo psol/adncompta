@@ -132,6 +132,7 @@
          </assert>
       </rule>
    </pattern>
+   <!-- TODO séparer la présence des fichiers (hors abstraits) et les contrôles de périodes/totaux (abstraits) -->
    <pattern abstract="true" id="interfiles">
       <title>Liens entre le message/envelope et les pièces, ainsi que les périodes</title>
       <rule context="rsmmsg:AAAWrapAccountingBook/ram:SpecifiedAAAWrapProcessedEntity">
@@ -275,7 +276,6 @@
             Err 039 : Voucher manquant pour le livre comptable <value-of select="ram:ID"/>
          </assert>
       </rule>
-      <!-- TODO implement as an abstract pattern! -->
       <rule context="rsmldg:AAALedgerLedger">
          <!-- 085 -->
          <assert test="count(ram:ID) = 1">
@@ -287,7 +287,13 @@
          </assert>
          <!-- 087 -->
          <assert test="count(ram:IncludedAAALedgerAccountingAccount) > 0">
-            Err 087 : Voucher manquant pour le livre comptable <value-of select="ram:ID"/>
+            Err 087 : compte manquant pour le grand livre <value-of select="ram:ID"/>
+         </assert>
+         <!-- 090 -->
+         <let name="entry-ids" value="distinct-values(ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine/ram:ConnectedAAALedgerAccountingEntry/ram:ID)"/>
+         <let name="comment-count" value="for $e in $entry-ids return count(ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine[ram:ConnectedAAALedgerAccountingEntry/ram:ID = $e]/ram:Comment) > 0"/>
+         <assert test="every $c in $comment-count satisfies $c">
+            Err 090 : les écritures <value-of select="for $e in $entry-ids return if (count(ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine[ram:ConnectedAAALedgerAccountingEntry/ram:ID = $e]/ram:Comment) > 0) then () else $e"/> n'ont pas au moins un commentaire sur une des lignes d'écriture
          </assert>
       </rule>
       <rule context="ram:IncludedOriginatorAccountingVoucher">
@@ -295,6 +301,16 @@
          <assert test="count(ram:RelatedEvidenceDocument) > 0">
             Err 040 : Document (pièce probante) manquant pour le livre comptable <value-of select="../ram:ID"/>
          </assert>
+      </rule>
+      <rule context="ram:IncludedAAALedgerAccountingAccount">
+         <!-- 088 -->
+         <assert test="count(ram:ID) > 0">
+            Err 088 : Identifiant manquant pour le compte <value-of select="position()"/>
+         </assert>
+         <!-- 089 -->
+         <assert test="count(ram:IncludedAAALedgerAccountingEntryLine) > 0">
+            Err 089 : Ligne d'écriture manquante pour le compte <value-of select="ram:ID"/>
+         </assert> 
       </rule>
       <rule context="ram:RelatedEvidenceDocument">
          <!-- 041 -->
@@ -312,8 +328,8 @@
             Err 045 : Date de validation manquante pour <value-of select="ram:ID"/>
          </assert>
          <!-- 048 -->
-         <assert test="every $l in ram:DetailedPostedAccountingEntryLine satisfies $l/ram:Comment">
-            Err 048 : Au moins une des lignes de l'écriture <value-of select="../ram:ID"/> n'a pas de libellé
+         <assert test="some $l in ram:DetailedPostedAccountingEntryLine satisfies $l/ram:Comment">
+            Err 048 : Aucune des lignes de l'écriture <value-of select="../ram:ID"/> n'a pas de libellé
          </assert>
       </rule>
       <rule context="ram:DetailedPostedAccountingEntryLine">
@@ -324,6 +340,48 @@
          <!-- 050 -->
          <assert test="count(ram:SpecifiedReferenceAccountingLineIndex) > 0">
             Err 050 : Numéro de ligne dans le document de base pour l'écriture <value-of select="../ram:ID"/> manquant
+         </assert>
+      </rule>
+      <rule context="ram:ConnectedAAALedgerAccountingEntry">
+         <!-- 092 -->
+         <assert test="count(ram:ID) = 1">
+            Err 092 : identifiant manquant pour l'écriture passée le <value-of select="ram:ValueDateDateTime"/>
+         </assert>
+         <!-- 093 -->
+         <assert test="count(ram:ProcessingStatusCode) = 1">
+            Err 093 : indicateur de validation de l'écriture <value-of select="ram:ID"/> absent 
+         </assert>
+         <!-- 094 -->
+         <assert test="count(ram:JournalID) = 1">
+            Err 094 : code journal absent pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+         <!-- 095 -->
+         <assert test="count(ram:ValueDateDateTime) = 1">
+            Err 095 : date de valeur absente pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+         <!-- 044 -->
+         <assert test="count(ram:Purpose) = count(ram:JournalID)">
+            Err 044 : libellé du journal obligatoire pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+         <!-- 096 -->
+         <assert test="(ram:ProcessingStatusCode = 1 and count(ram:ValidationDateTime) = 1) or (ram:ProcessingStatusCode != 1 and count(ram:ValidationDateTime) = 0)">
+            Err 096 : date de validation incorrecte pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+         <!-- 097 -->
+         <assert test="count(ram:JustificationAAALedgerDocument) = 1">
+            Err 097 : document de justification manquant pour l'écriture <value-of select="ram:ID"/>
+         </assert>
+      </rule>
+      <rule context="ramJustificationAAALedgerDocument">
+         <!-- 098 -->
+         <assert test="count(ram:ID)">
+            Err 098 : identifiant du document manquant pour l'écriture <value-of select="../ram:ID"/>
+         </assert>
+      </rule>
+      <rule context="ram:RepeatedAAALedgerMonetaryInstalment">
+         <!-- 099 -->
+         <assert test="count(ram:PaymentAmount) = 1">
+            Err 099 : montant manquant pour l'échéancier
          </assert>
       </rule>
       <rule context="ram:SpecifiedReferenceAccountingLineIndex">
@@ -338,7 +396,7 @@
             Err 055 : Numero de compte manquant
          </assert>
       </rule>
-      <rule context="ram:RelatedFiscalTax">
+      <rule context="ram:RelatedFiscalTax | ram:RelatedAAALedgerTax">
          <!-- 066 -->
          <assert test="count(ram:TypeCode) = 1">
             Err 066 : Type de taxe <value-of select="ram:CalculatedRate"/> manquant
@@ -352,7 +410,7 @@
             Err 068 : Taux de taxe <value-of select="ram:TypeCode"/> manquant
          </assert>
       </rule>
-      <rule context="ram:DerivedLinkedReport">
+      <rule context="ram:DerivedLinkedReport | ram:DerivedAAALedgerReport">
          <!-- 069 -->
          <assert test="count(ram:Name) = count(ram:ItemID)">
             Err 069 : Nom ou numéro d'item manquant
@@ -437,19 +495,32 @@
       </rule>
    </pattern>
    <pattern>
-      <!-- 047 -->
       <title>Equilibre de l'écriture</title>
+      <!-- 047 -->
       <rule context="ram:JustifiedPostedAccountingEntry">
-         <let name="debit"  value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
-         <let name="credit" value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
+         <let name="debit"  value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
+         <let name="credit" value="ram:DetailedPostedAccountingEntryLine/ram:RelatedPostedAccountingLineMonetaryValue[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
          <assert test="round-half-to-even(sum($debit), 2) = round-half-to-even(sum($credit), 2)">
             Err 047 : Débit (<value-of select="round-half-to-even(sum($debit), 2)"/>) n'est pas égal au crédit (<value-of select="round-half-to-even(sum($credit), 2)"/>) pour l'écriture (<value-of select="ram:ID"/>).
+         </assert>
+      </rule>
+      <!-- 091 -->
+      <rule context="ram:IncludedAAALedgerAccountingEntryLine[not(empty(index-of($debitCodes, ram:RelatedAAALedgerAccountingLineMonetaryValue/ram:DebitCreditCode)))]">
+         <!-- assez inefficace : on recalcule l'équilibre pour chaque ligne… au lieu de chaque écriture -->
+         <!-- mais c'est beaucoup plus lisible/maintenable que de regrouper les écritures distinctes    -->
+         <!-- pour atténuez l'inefficacité, on ne fait le contrôles que sur les line de débit           -->
+         <!-- bien entendu, le crédit correspondant est vérifié puisqu'on vérifie que débit = crédit    -->
+         <let name="entry"  value="ram:ConnectedAAALedgerAccountingEntry/ram:ID"/>
+         <let name="debit"  value="../../ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine[ram:ConnectedAAALedgerAccountingEntry/ram:ID = $entry]/ram:RelatedAAALedgerAccountingLineMonetaryValue[not(empty(index-of($debitCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
+         <let name="credit" value="../../ram:IncludedAAALedgerAccountingAccount/ram:IncludedAAALedgerAccountingEntryLine[ram:ConnectedAAALedgerAccountingEntry/ram:ID = $entry]/ram:RelatedAAALedgerAccountingLineMonetaryValue[not(empty(index-of($creditCodes, ram:DebitCreditCode)))]/ram:LocalAccountingCurrencyAmount"/>
+         <assert test="round-half-to-even(sum($debit), 2) = round-half-to-even(sum($credit), 2)">
+            Err 091 : Débit (<value-of select="round-half-to-even(sum($debit), 2)"/>) n'est pas égal au crédit (<value-of select="round-half-to-even(sum($credit), 2)"/>) pour l'écriture (<value-of select="ram:ConnectedAAALedgerAccountingEntry/ram:ID"/>).
          </assert>
       </rule>
    </pattern>
    <pattern>
       <title>Vérification des journaux</title>
-      <rule context="ram:JustifiedPostedAccountingEntry">
+      <rule context="ram:JustifiedPostedAccountingEntry | ram:ConnectedAAALedgerAccountingEntry">
          <!-- 043 -->
          <assert test="string-length(ram:JournalID) lt 7">
             Err 043 : Longueur incorrecte pour le numéro de journal
@@ -465,7 +536,7 @@
             Err 064 : Le type de comptabilité est <value-of select="ram:TypeCode"/> mais seul 1 (comptabilité générale) est permis pour le moment
          </assert>
       </rule>
-      <rule context="ram:JustifiedPostedAccountingEntry">
+      <rule context="ram:JustifiedPostedAccountingEntry | ram:ConnectedAAALedgerAccountingEntry">
          <!-- 042 -->
          <assert test="ram:ProcessingStatusCode = '1'">
             Err 042 : Ecriture non validée
@@ -475,7 +546,7 @@
    <pattern>
       <title>Code débit/crédit</title>
       <!-- 053 -->
-      <rule context="ram:RelatedPostedAccountingLineMonetaryValue">
+      <rule context="ram:RelatedPostedAccountingLineMonetaryValue | ram:RelatedAAALedgerAccountingLineMonetaryValue">
          <assert test="matches(ram:DebitCreditCode, '29|30|31|32|33|34')">
             Err 053 : Code debit/credit inacceptable <value-of select="ram:DebitCreditCode"/>
          </assert>
@@ -534,9 +605,12 @@
    <pattern>
       <title>Cohérence des lignes de décomposition</title>
       <!-- 065 -->
-      <rule context="ram:DetailedPostedAccountingEntryLine[ram:RepeatedPortionedMonetaryInstalment]">
+      <rule context="ram:DetailedPostedAccountingEntryLine[ram:RepeatedPortionedMonetaryInstalment] | ram:IncludedAAALedgerAccountingEntryLine[ram:RepeatedAAALedgerMonetaryInstalment]">
          <assert test="round-half-to-even(sum(ram:RepeatedPortionedMonetaryInstalment/ram:PaymentAmount), 2) = round-half-to-even(ram:RelatedPostedAccountingLineMonetaryValue/ram:LocalAccountingCurrencyAmount, 2)">
             Err 065 : La somme des lignes de décomposition <value-of select="(sum(ram:RepeatedPortionedMonetaryInstalment/ram:PaymentAmount))"/> n'est pas cohérente avec le montant de la ligne <value-of select="ram:RelatedPostedAccountingLineMonetaryValue/ram:LocalAccountingCurrencyAmount"/> pour <value-of select="../ram:ID"/>
+         </assert>
+         <assert test="round-half-to-even(sum(ram:RepeatedAAALedgerMonetaryInstalment/ram:PaymentAmount), 2) = round-half-to-even(ram:RelatedAAALedgerAccountingLineMonetaryValue/ram:LocalAccountingCurrencyAmount, 2)">
+            Err 065 : La somme des lignes de décomposition <value-of select="(sum(ram:RepeatedAAALedgerMonetaryInstalment/ram:PaymentAmount))"/> n'est pas cohérente avec le montant de la ligne <value-of select="ram:RelatedAAALedgerAccountingLineMonetaryValue/ram:LocalAccountingCurrencyAmount"/> pour <value-of select="../ram:ID"/>
          </assert>
       </rule>
    </pattern>
