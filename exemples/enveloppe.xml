@@ -5,7 +5,7 @@
    <rsm:AAAWrapAccountingBook>
       <ram:ID>1</ram:ID>
       <ram:SpecifiedAAAWrapProcessedEntity>
-         <ram:ScenarioIdentificationID>ADNCompta_2013_PreparerIntermediary_Entry</ram:ScenarioIdentificationID>
+         <ram:ScenarioIdentificationID>ADNCompta_Legal_2014_PreparerIntermediary_Entry</ram:ScenarioIdentificationID>
          <ram:ScenarioStepNumberNumeric>2</ram:ScenarioStepNumberNumeric>
          <ram:AccountingIdentificationID>349</ram:AccountingIdentificationID>
          <ram:AccountingMethod>auxiliaire</ram:AccountingMethod>
@@ -89,8 +89,8 @@
             <ram:Comment>Ventes de pommes</ram:Comment>
             <ram:SpecifiedAAAWrapAccountingPeriod>
                <ram:SpecifiedAAAPeriod>
-                  <ram:StartDateTime>2012-01-01T24:00:00</ram:StartDateTime>
-                  <ram:EndDateTime>2012-12-30T24:00:00</ram:EndDateTime>
+                  <ram:StartDateTime>2012-01-01T00:00:00</ram:StartDateTime>
+                  <ram:EndDateTime>2012-12-31T24:00:00</ram:EndDateTime>
                   <ram:InclusiveIndicator>true</ram:InclusiveIndicator>
                   <!-- should be 746 -->
                   <ram:FunctionCode>322</ram:FunctionCode>

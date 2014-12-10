@@ -14,6 +14,21 @@
                         <scenarioAssociation-array>
                             <scenarioAssociation>
                                 <field name="url">
+                                    <String>exemples/enveloppe.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (message)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
                                     <String>exemples/ledger.xml</String>
                                 </field>
                                 <field name="scenarioIds">
@@ -29,7 +44,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/Users/ESM/Desktop/Nouveau%20dossier/ECRITURE1DOSSIER_1052014.xml</String>
+                                    <String>exemples/entry.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -44,7 +59,37 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/entry.xml</String>
+                                    <String>../ECRITURE1TEST_ESM122015.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/message.xml</String>
+                                </field>
+                                <field name="scenarioIds">
+                                    <list>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (message)</String>
+                                    </list>
+                                </field>
+                                <field name="scenarioTypes">
+                                    <list>
+                                        <String>Validation_scenario</String>
+                                    </list>
+                                </field>
+                            </scenarioAssociation>
+                            <scenarioAssociation>
+                                <field name="url">
+                                    <String>exemples/Ecritures.XML</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -74,7 +119,7 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/Ecritures.XML</String>
+                                    <String>exemples/Users/ESM/Desktop/Nouveau%20dossier/ECRITURE1DOSSIER_1052014.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
@@ -94,21 +139,6 @@
                                 <field name="scenarioIds">
                                     <list>
                                         <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
-                                    </list>
-                                </field>
-                                <field name="scenarioTypes">
-                                    <list>
-                                        <String>Validation_scenario</String>
-                                    </list>
-                                </field>
-                            </scenarioAssociation>
-                            <scenarioAssociation>
-                                <field name="url">
-                                    <String>exemples/message.xml</String>
-                                </field>
-                                <field name="scenarioIds">
-                                    <list>
-                                        <String>Scenario 1 : Emetteur vers intermédiaire (message)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -433,8 +463,7 @@
             <file name="../../uncefact11a/data/standard/AAAAccountingEntryMessage_2p0.xsd"/>
             <file name="../../uncefact11a/data/standard/AAAAccountingMessage_2p0.xsd"/>
             <file name="../../uncefact11a/data/standard/AAALedgerMessage_2p0.xsd"/>
-            <file name="exemples/Users/ESM/Desktop/Nouveau%20dossier/ECRITURE1DOSSIER_1052014.xml"/>
-            <file name="exemples/Ecritures.XML"/>
+            <file name="../ECRITURE1TEST_ESM122015.xml"/>
         </folder>
         <folder path="exemples/"/>
         <file name="controles-metier/uncefact11a.sch"/>
