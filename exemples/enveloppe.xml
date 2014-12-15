@@ -5,8 +5,8 @@
    <rsm:AAAWrapAccountingBook>
       <ram:ID>1</ram:ID>
       <ram:SpecifiedAAAWrapProcessedEntity>
-         <ram:ScenarioIdentificationID>ADNCompta_Legal_2014_PreparerIntermediary_Entry</ram:ScenarioIdentificationID>
-         <ram:ScenarioStepNumberNumeric>2</ram:ScenarioStepNumberNumeric>
+         <ram:ScenarioIdentificationID>ADNCompta_Legal_2014_PreparerArchiver_Entry</ram:ScenarioIdentificationID>
+         <ram:ScenarioStepNumberNumeric>1</ram:ScenarioStepNumberNumeric>
          <ram:AccountingIdentificationID>349</ram:AccountingIdentificationID>
          <ram:AccountingMethod>auxiliaire</ram:AccountingMethod>
          <ram:LocalAccountingCurrencyCode>eur</ram:LocalAccountingCurrencyCode>
@@ -22,6 +22,7 @@
                <ram:CountryName>France</ram:CountryName>
             </ram:PostalAAAAddress>
          </ram:OriginatorAAAWrapOrganization>
+         <!--
          <ram:RecipientAAAWrapOrganization>
             <ram:Name>Guillaume Tell</ram:Name>
             <ram:ID>73282932000074</ram:ID>
@@ -31,6 +32,7 @@
                <ram:CityName>Paris</ram:CityName>
             </ram:PostalAAAAddress>
          </ram:RecipientAAAWrapOrganization>
+         -->
          <ram:SenderAAAWrapOrganization>
             <ram:Name>Pomme d'API</ram:Name>
             <ram:ID>422260208</ram:ID>

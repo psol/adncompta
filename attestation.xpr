@@ -29,11 +29,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/ledger.xml</String>
+                                    <String>exemples/entry.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Scenario 1 : Emetteur vers intermédiaire (ledger)</String>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">
@@ -44,11 +44,11 @@
                             </scenarioAssociation>
                             <scenarioAssociation>
                                 <field name="url">
-                                    <String>exemples/entry.xml</String>
+                                    <String>exemples/ledger.xml</String>
                                 </field>
                                 <field name="scenarioIds">
                                     <list>
-                                        <String>Scenario 1 : Emetteur vers intermédiaire (entry)</String>
+                                        <String>Scenario 1 : Emetteur vers intermédiaire (ledger)</String>
                                     </list>
                                 </field>
                                 <field name="scenarioTypes">

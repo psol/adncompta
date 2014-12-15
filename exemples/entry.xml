@@ -17,6 +17,7 @@
 				<ram:TypeCode>533</ram:TypeCode>
 				<ram:CreationDateTime>2012-10-24T00:00:00</ram:CreationDateTime>
 				<ram:JustifiedPostedAccountingEntry>
+					<ram:ID>1</ram:ID>
 					<ram:ProcessingStatusCode>1</ram:ProcessingStatusCode>
 					<ram:JournalID>ACH</ram:JournalID>
 					<ram:ValueDateDateTime>2012-10-24T00:00:00</ram:ValueDateDateTime>

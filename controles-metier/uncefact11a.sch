@@ -16,7 +16,7 @@
    http://www.oyxgenxml.com
 -->
 <schema xmlns="http://purl.oclc.org/dsdl/schematron" queryBinding="xslt2">
-   <title>Validation de l'écriture comptable, niveau 1, 2014e</title>
+   <title>Validation de l'écriture comptable, niveau 1, 2014f</title>
    <ns uri="urn:un:unece:uncefact:data:standard:ReusableAggregateBusinessInformationEntity:10" prefix="ram"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAReportingMessage:2" prefix="rsmres"/>
    <ns uri="urn:un:unece:uncefact:data:standard:AAAChartOfAccountsMessage:2" prefix="rsmcha"/>
@@ -97,16 +97,17 @@
          <assert test="count(ram:ScenarioStepNumberNumeric) = 1">
             Err 004 : Le numéro d'étape dans le scénario manquant.
          </assert>
-         <let name="actors" value="substring(ram:ScenarioIdentificationID, 22, 20)"/>
+         <let name="actors" value="substring-before(substring(ram:ScenarioIdentificationID, 22, 20), '_')"/>
          <!-- 005 -->
          <assert test="($actors = 'PreparerIntermediary' and (ram:ScenarioStepNumberNumeric = '1' or ram:ScenarioStepNumberNumeric = '2')) or
-                       ($actors = 'IntermediaryArchiver' and (ram:ScenarioStepNumberNumeric = '2' or ram:ScenarioStepNumberNumeric = '3'))">
+                       ($actors = 'IntermediaryArchiver' and (ram:ScenarioStepNumberNumeric = '2' or ram:ScenarioStepNumberNumeric = '3')) or
+                       ($actors = 'PreparerArchiver'     and  ram:ScenarioStepNumberNumeric = '1')">
             Err 005 : Etape de scénario <value-of select="ram:ScenarioStepNumberNumeric"/> incohérente pour un scénario entre <value-of select="$actors"/>
          </assert>
       </rule>
       <rule context="ram:ScenarioIdentificationID">
          <!-- 003 -->
-         <assert test="matches(., '^ADNCompta_((Legal)|(Plain))_2014_((PreparerIntermediary)|(IntermediaryArchiver))_Entry$')">
+         <assert test="matches(., '^ADNCompta_((Legal)|(Plain))_2014_((PreparerIntermediary)|(IntermediaryArchiver)|(PreparerArchiver))_Entry$')">
             Err 003 : Identifiant du scénario inconnu ou mal formé
          </assert>
       </rule>
@@ -229,7 +230,7 @@
             Err 010 : Cardinalité d'émetteur incorrect (1-1 attendu)
          </assert>
          <!-- 011 -->
-         <assert test="count(ram:RecipientAAAWrapOrganization) > 0">
+         <assert test="if(matches(ram:ScenarioIdentificationID, '^ADNCompta_.{11}_((PreparerIntermediary)|(IntermediaryArchiver))')) then count(ram:RecipientAAAWrapOrganization) > 0 else true()">
             Err 011 : Cardinalité de destinataire incorrect (1-n attendu)
          </assert>
          <!-- 070 -->
@@ -239,10 +240,6 @@
          <!-- 012 -->
          <assert test="count(ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware) > 0">
             Err 012 : Identifiant du logiciel manquant
-         </assert>
-         <!-- 079 -->
-         <assert test="count(ram:AccountingMethod) > 0">
-            Err 079 : Méthode comptable manquante
          </assert>
       </rule>
       <rule context="ram:SenderAAAWrapSoftware | ram:RecipientAAAWrapSoftware | ram:IntermediateAAAWrapSoftware">
@@ -504,10 +501,6 @@
          <!-- 029 -->
          <assert test="count(ram:EndDateTime) = 1">
             Err 029 : Date de fin de période manquante pour la période débutant en <value-of select="ram:StartDateTime"/>
-         </assert>
-         <!-- 030 -->
-         <assert test="count(ram:InclusiveIndicator) = 1">
-            Err 030 : Indicateur d'inclusivité manquant pour la période <value-of select="ram:StartDateTime"/>-<value-of select="ram:EndDateTime"/>
          </assert>
          <!-- 031 -->
          <assert test="count(ram:FunctionCode) = 1">
